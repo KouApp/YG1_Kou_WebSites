@@ -22,7 +22,7 @@ Belirsiz
   
   
 Yasin Şahin : [Dökümantasyon](https://github.com/KouApp/KouWebSite/blob/main/readme/yasin.md)  
-Abdullah Ali Gün : [Dökümantasyon](link(https://github.com/KouApp/KouWebSite/blob/main/readme/ali.md))  
-Emre Çetindemir : [Dökümantasyon](link(https://github.com/KouApp/KouWebSite/blob/main/readme/emre.md))  
-Sıraç : [Dökümantasyon](link(https://github.com/KouApp/KouWebSite/blob/main/readme/sirac.md))  
-Merve Tekin : [Dökümantasyon](link(https://github.com/KouApp/KouWebSite/blob/main/readme/merve.md))  
+Abdullah Ali Gün : [Dökümantasyon](https://github.com/KouApp/KouWebSite/blob/main/readme/ali.md)  
+Emre Çetindemir : [Dökümantasyon](https://github.com/KouApp/KouWebSite/blob/main/readme/emre.md)  
+Sıraç : [Dökümantasyon](https://github.com/KouApp/KouWebSite/blob/main/readme/sirac.md)  
+Merve Tekin : [Dökümantasyon](https://github.com/KouApp/KouWebSite/blob/main/readme/merve.md)  
