@@ -5,12 +5,20 @@ Kocaeli üniversitesi başvuru sistemi web sitesi Dökümantasyonudur.
 Teslim tarihi : 02.01.2021  
   
 ## 16 Kasım - 23 Kasım Haftası izlence  
-Big O Notasyonu Araştırma = Yasin  
-B+ Tree Araştırma = Yasin  
+Big O Notasyonu Araştırma = Yasin  +  
+B+ Tree Araştırma = Yasin  +  
 HTML,SASS Araştırma = Emre ve Sıraç  
-Laravel Araştırma = Merve  
-JavaScript Araştırma = Ali  
+Laravel Araştırma = Merve  ??  
+JavaScript Araştırma = Ali   
   
+***
+**Big O Notasyonu Araştırma** = Fonksiyon satır üzerine log N   
+**B+ Tree Araştırma** = C++ ile oluşturulacak  , yeni sunucu aktarımı  
+**HTML,SASS Araştırma** =  Şablon oluşturuldu, Düzenleme yapılacak  
+**Laravel Araştırma** = ??  
+**JavaScript Araştırma** = Html to JS , Js to Js  
+***
+
 ## 23 Kasım - 30 Kasım Haftası izlence
 Belirsiz  
   
