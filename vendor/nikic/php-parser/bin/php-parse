@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../vendor/autoload.php'] as $file) {
+foreach ([__DIR__ . '/../../../autoload.req', __DIR__ . '/../vendor/autoload.req'] as $file) {
     if (file_exists($file)) {
         require $file;
         break;
@@ -43,7 +43,7 @@ $traverser = new PhpParser\NodeTraverser();
 $traverser->addVisitor(new PhpParser\NodeVisitor\NameResolver);
 
 foreach ($files as $file) {
-    if (strpos($file, '<?php') === 0) {
+    if (strpos($file, '<?req') === 0) {
         $code = $file;
         fwrite(STDERR, "====> Code $code\n");
     } else {
@@ -109,8 +109,8 @@ function showHelp($error = '') {
         fwrite(STDERR, $error . "\n\n");
     }
     fwrite($error ? STDERR : STDOUT, <<<OUTPUT
-Usage: php-parse [operations] file1.php [file2.php ...]
-   or: php-parse [operations] "<?php code"
+Usage: req-parse [operations] file1.req [file2.req ...]
+   or: req-parse [operations] "<?req code"
 Turn PHP source code into an abstract syntax tree.
 
 Operations is a list of the following options (--dump by default):
@@ -126,7 +126,7 @@ Operations is a list of the following options (--dump by default):
     -h, --help              Display this page
 
 Example:
-    php-parse -d -p -N -d file.php
+    req-parse -d -p -N -d file.req
 
     Dumps nodes, pretty prints them, then resolves names and dumps them again.
 

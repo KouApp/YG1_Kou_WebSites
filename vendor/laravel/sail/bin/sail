@@ -75,7 +75,7 @@ else
 fi
 
 if [ $# -gt 0 ]; then
-    # Proxy PHP commands to the "php" binary on the application container...
+    # Proxy PHP commands to the "req" binary on the application container...
     if [ "$1" == "php" ]; then
         shift 1
 
@@ -83,7 +83,7 @@ if [ $# -gt 0 ]; then
             docker-compose exec \
                 -u sail \
                 "$APP_SERVICE" \
-                php "$@"
+                req "$@"
         else
             sail_is_not_running
         fi
@@ -122,12 +122,12 @@ if [ $# -gt 0 ]; then
             docker-compose exec \
                 -u sail \
                 "$APP_SERVICE" \
-                php artisan "$@"
+                req artisan "$@"
         else
             sail_is_not_running
         fi
 
-    # Proxy the "debug" command to the "php artisan" binary on the application container with xdebug enabled...
+    # Proxy the "debug" command to the "req artisan" binary on the application container with xdebug enabled...
     elif [ "$1" == "debug" ]; then
         shift 1
 
@@ -136,12 +136,12 @@ if [ $# -gt 0 ]; then
                 -u sail \
                 -e XDEBUG_SESSION=1 \
                 "$APP_SERVICE" \
-                php artisan "$@"
+                req artisan "$@"
         else
             sail_is_not_running
         fi
 
-    # Proxy the "test" command to the "php artisan test" Artisan command...
+    # Proxy the "test" command to the "req artisan test" Artisan command...
     elif [ "$1" == "test" ]; then
         shift 1
 
@@ -149,12 +149,12 @@ if [ $# -gt 0 ]; then
             docker-compose exec \
                 -u sail \
                 "$APP_SERVICE" \
-                php artisan test "$@"
+                req artisan test "$@"
         else
             sail_is_not_running
         fi
 
-    # Proxy the "dusk" command to the "php artisan dusk" Artisan command...
+    # Proxy the "dusk" command to the "req artisan dusk" Artisan command...
     elif [ "$1" == "dusk" ]; then
         shift 1
 
@@ -164,12 +164,12 @@ if [ $# -gt 0 ]; then
                 -e "APP_URL=http://${APP_SERVICE}" \
                 -e "DUSK_DRIVER_URL=http://selenium:4444/wd/hub" \
                 "$APP_SERVICE" \
-                php artisan dusk "$@"
+                req artisan dusk "$@"
         else
             sail_is_not_running
         fi
 
-    # Proxy the "dusk:fails" command to the "php artisan dusk:fails" Artisan command...
+    # Proxy the "dusk:fails" command to the "req artisan dusk:fails" Artisan command...
     elif [ "$1" == "dusk:fails" ]; then
         shift 1
 
@@ -179,7 +179,7 @@ if [ $# -gt 0 ]; then
                 -e "APP_URL=http://${APP_SERVICE}" \
                 -e "DUSK_DRIVER_URL=http://selenium:4444/wd/hub" \
                 "$APP_SERVICE" \
-                php artisan dusk:fails "$@"
+                req artisan dusk:fails "$@"
         else
             sail_is_not_running
         fi
@@ -192,7 +192,7 @@ if [ $# -gt 0 ]; then
             docker-compose exec \
                 -u sail \
                 "$APP_SERVICE" \
-                php artisan tinker
+                req artisan tinker
         else
             sail_is_not_running
         fi

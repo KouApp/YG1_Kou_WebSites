@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,17 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kullanıcı Paneli</title>
-    <link rel="stylesheet" href="userPanel.css">
+    <link rel="stylesheet" href="css/userPanel.css">
 
 </head>
 
 <body>
+
     <div class="user-info-container">
         <p id="studentName">
-        <h1>Sirac ARAPOĞLU</h1>
+        <h1>dss</h1>
         </p>
         <p id="studentNo">
-        <h3><b>211307097</b></h3>
+        <h3><b>12312</b></h3>
         </p>
     </div>
 
@@ -25,7 +27,7 @@
             GEÇMİŞ BAŞVURULAR
         </div>
         <div class="new-application">
-            <a href="" type="button" id="newAppButton">Yeni Başvuru</a>
+            <a href="userYGB.php" type="button" id="newAppButton">Yeni Başvuru</a>
         </div>
     </div>
 </body>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,16 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yatay Geçiş Başvurusu</title>
-    <link rel="stylesheet" href="userYGB.css">
+    <link rel="stylesheet" href="css/userYGB.css">
 </head>
 
 <body>
+
     <div class="user-info-container">
         <p id="studentName">
-        <h1>Sirac ARAPOĞLU</h1>
+        <h1>ss</h1>
         </p>
         <p id="studentNo">
-        <h3><b>211307097</b></h3>
+        <h3><b></b></h3>
         </p>
     </div>
 
