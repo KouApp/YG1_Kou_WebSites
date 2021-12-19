@@ -1,6 +1,10 @@
+<html>
+<head></head>
+<body>
+<h1>Giriş sayfası</h1>
 <?php
 
-function tests(){
+function tests($isim){
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
@@ -12,7 +16,7 @@ function tests(){
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => array('name' => 'aaa'),
+        CURLOPT_POSTFIELDS => array('name' => $isim),
     ));
 
     $response = curl_exec($curl);
@@ -20,5 +24,7 @@ function tests(){
     curl_close($curl);
     echo $response;
 }
-tests();
-tests();
+?>
+<button onclick="document.write('<?php tests("adaa") ?>');">Tıkla</button>
+</body>
+</html>

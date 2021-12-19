@@ -5,15 +5,15 @@ use Carbon\Cli\Invoker;
 
 $dir = __DIR__.'/..';
 
-if (!file_exists($dir.'/autoload.php')) {
+if (!file_exists($dir.'/autoload.req')) {
     $dir = __DIR__.'/../vendor';
 }
 
-if (!file_exists($dir.'/autoload.php')) {
+if (!file_exists($dir.'/autoload.req')) {
     $dir = __DIR__.'/../../..';
 }
 
-if (!file_exists($dir.'/autoload.php')) {
+if (!file_exists($dir.'/autoload.req')) {
     echo 'Autoload not found.';
     exit(1);
 }
