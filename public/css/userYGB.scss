@@ -52,10 +52,87 @@ body {
             justify-content: space-between;
             align-items: center;
             margin-top: 25px;
+            #select {
+                height: 35px;
+                width: 16em;
+                padding: 0 0.5em;
+                border: 2px solid grey;
+            }
             input {
                 height: 35px;
-                padding: 0 20px;
+                width: 16em;
+                padding: 0 0.5em;
                 border: 2px solid grey;
+            }
+        }
+        .file-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 35px;
+            .file-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                font-weight: bold;
+                font-size: 21px;
+                margin-bottom: 15px;
+            }
+            .file-row {
+                display: flex;
+                justify-content: center;
+                .file-column {
+                    width: 190px;
+                    height: 100px;
+                    padding: 0px;
+                    margin: 5px;
+
+                    background-color: rgb(223, 253, 238);
+                    border-radius: 3px;
+                    border-style: solid;
+                    border-width: 1px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .file-button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        margin-top: 8px;
+                        background-color: rgb(105, 197, 146);
+                        width: 110px;
+                        height: 30px;
+                        line-height: 40px;
+                        color: white;
+                        border-radius: 5px;
+                        transition: 300ms;
+                        font-size: 17px;
+                    }
+                    .file-button:hover {
+                        background-color: $hoverbg;
+                    }
+                }
+            }
+            .apply-button {
+                margin-top: 15px;
+                background-color: rgb(105, 197, 146);
+                width: 130px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                color: white;
+                border-radius: 5px;
+                transition: 300ms;
+                font-size: 17px;
+            }
+            .apply-button:hover {
+                background-color: $hoverbg;
             }
         }
     }

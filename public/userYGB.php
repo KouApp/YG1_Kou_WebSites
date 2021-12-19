@@ -28,11 +28,21 @@
 
         <div class="row">
             <p>Başvuru Türü:</p>
-            <input type="text" placeholder="Başvuru Türü">
+            <select name="select" id="select">
+                <option selected disabled>Seçim Yapınız</option>
+                <option value="1">Kurum İçi Yatay Geçiş</option>
+                <option value="2">Kurumlar Arası Yatay Geçiş</option>
+                <option value="1">Merkezi Yatay Geçiş</option>
+                <option value="2">Yurtdışı Yatay Geçiş</option>
+            </select>
         </div>
         <div class="row">
             <p>Öğrenim Türü:</p>
-            <input type="text" placeholder="Öğrenim Türü">
+            <select name="select" id="select">
+                <option selected disabled>Seçim Yapınız</option>
+                <option value="1">Birinci Öğretim</option>
+                <option value="2">İkinci Öğretim</option>
+            </select>
         </div>
         <div class="row">
             <p>Ad Soyad:</p>
@@ -126,6 +136,40 @@
             <p>Disiplin Cezası:</p>
             <input type="text" placeholder="Disiplin Cezası">
         </div>
+
+        <div class="file-container">
+            <p class="file-header">GEREKEN DOSYALAR</p>
+            <div class="file-row">
+                <div class="file-column">
+                    <h3><b>Transkript</b></h3>
+                    <p name="transkript-file">Yüklenmedi</p>
+                    <a href="#" class="file-button">Ekle</a>
+                </div>
+
+                <div class="file-column">
+                    <h3><b>Disiplin Cezası</b></h3>
+                    <p name="dicipline-file">disiplin.pdf</p>
+                    <a href="#" class="file-button">Ekle</a>
+                </div>
+            </div>
+
+            <div class="file-row">
+                <div class="file-column">
+                    <h3><b>ÖSYM Sınav Belgesi</b></h3>
+                    <p name="exam-file">sinavsonuc.pdf</p>
+                    <a href="#" class="file-button">Ekle</a>
+                </div>
+
+                <div class="file-column">
+                    <h3><b>Dekont</b></h3>
+                    <p name="decont-file">Yüklenmedi</p>
+                    <a href="#" class="file-button">Ekle</a>
+                </div>
+            </div>
+
+            <a href="" class="apply-button">Başvur</a>
+        </div>
+
     </div>
 
 </body>

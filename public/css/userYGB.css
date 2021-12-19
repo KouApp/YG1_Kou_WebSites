@@ -80,9 +80,128 @@ body .container .row {
   margin-top: 25px;
 }
 
+body .container .row #select {
+  height: 35px;
+  width: 16em;
+  padding: 0 0.5em;
+  border: 2px solid grey;
+}
+
 body .container .row input {
   height: 35px;
-  padding: 0 20px;
+  width: 16em;
+  padding: 0 0.5em;
   border: 2px solid grey;
+}
+
+body .container .file-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 35px;
+}
+
+body .container .file-container .file-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+body .container .file-container .file-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .file-container .file-row .file-column {
+  width: 190px;
+  height: 100px;
+  padding: 0px;
+  margin: 5px;
+  background-color: #dffdee;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .file-container .file-row .file-column .file-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 8px;
+  background-color: #69c592;
+  width: 110px;
+  height: 30px;
+  line-height: 40px;
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  font-size: 17px;
+}
+
+body .container .file-container .file-row .file-column .file-button:hover {
+  background-color: #528b6c;
+}
+
+body .container .file-container .apply-button {
+  margin-top: 15px;
+  background-color: #69c592;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  font-size: 17px;
+}
+
+body .container .file-container .apply-button:hover {
+  background-color: #528b6c;
 }
 /*# sourceMappingURL=userYGB.css.map */
