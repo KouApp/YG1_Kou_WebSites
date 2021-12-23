@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +15,14 @@
 
 <body>
 
+
+    <a href="logout.php">Cıkıs Yap</a>
     <div class="user-info-container">
         <p id="studentName">
-        <h1>dss</h1>
+        <h1><?php echo $_SESSION['user_name']; ?>  <?php echo $_SESSION['user_surname']; ?></h1>
         </p>
         <p id="studentNo">
-        <h3><b>12312</b></h3>
+        <h3><b><?php echo $_SESSION['user']; ?></b></h3>
         </p>
     </div>
 

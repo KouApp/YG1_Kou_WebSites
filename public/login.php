@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +18,8 @@
         <div class="login-header">
             SİSTEM GİRİŞ
         </div>
-        <form action="req/login.php" method="post">
+        <form action="GETlogin.php" method="post">
+            <?php echo $_SESSION['error_login']; ?>
             <div class="input-container">
                 <input type="text" id="loginNo" name="login" placeholder="Kullanıcı Numarası">
                 <input type="password" id="loginPassword" name="password" placeholder="Şifre">

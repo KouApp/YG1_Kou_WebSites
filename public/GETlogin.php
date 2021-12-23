@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 $curl = curl_init();
 
@@ -20,9 +20,11 @@ $response = curl_exec($curl);
 curl_close($curl);
 
 if ($response == "users"):
-
+    $_SESSION['user']=$_POST['login'];
     echo "giris basarılı";
+    header("Location: http://127.0.0.1:8000/GETuserinfo.php");
 else:
-    header("Location: http://127.0.0.1:8000");
+    $_SESSION['error_login']="Yanlis deneme :)";
+    header("Location: http://127.0.0.1:8000/login.php");
 endif;
 
