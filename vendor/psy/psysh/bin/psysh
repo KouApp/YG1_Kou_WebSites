@@ -53,12 +53,12 @@ call_user_func(function () {
             if ($cfg = json_decode(file_get_contents($path . '/composer.json'), true)) {
                 if (isset($cfg['name']) && $cfg['name'] === 'psy/psysh') {
                     // We're inside the psysh project. Let's use the local Composer autoload.
-                    if (is_file($path . '/vendor/autoload.req')) {
+                    if (is_file($path . '/vendor/autoload.php')) {
                         if (realpath($path) !== realpath(__DIR__ . '/..')) {
                             fwrite(STDERR, 'Using local PsySH version at ' . $prettyPath . PHP_EOL);
                         }
 
-                        require $path . '/vendor/autoload.req';
+                        require $path . '/vendor/autoload.php';
                     }
 
                     return;
@@ -72,12 +72,12 @@ call_user_func(function () {
                 foreach (array_merge($cfg['packages'], $cfg['packages-dev']) as $pkg) {
                     if (isset($pkg['name']) && $pkg['name'] === 'psy/psysh') {
                         // We're inside a project which requires psysh. We'll use the local Composer autoload.
-                        if (is_file($path . '/vendor/autoload.req')) {
+                        if (is_file($path . '/vendor/autoload.php')) {
                             if (realpath($path . '/vendor') !== realpath(__DIR__ . '/../../..')) {
                                 fwrite(STDERR, 'Using local PsySH version at ' . $prettyPath . PHP_EOL);
                             }
 
-                            require $path . '/vendor/autoload.req';
+                            require $path . '/vendor/autoload.php';
                         }
 
                         return;
@@ -94,10 +94,10 @@ call_user_func(function () {
 // came with this script.
 if (!class_exists('Psy\Shell')) {
 /* <<< */
-    if (is_file(__DIR__ . '/../vendor/autoload.req')) {
-        require __DIR__ . '/../vendor/autoload.req';
-    } elseif (is_file(__DIR__ . '/../../../autoload.req')) {
-        require __DIR__ . '/../../../autoload.req';
+    if (is_file(__DIR__ . '/../vendor/autoload.php')) {
+        require __DIR__ . '/../vendor/autoload.php';
+    } elseif (is_file(__DIR__ . '/../../../autoload.php')) {
+        require __DIR__ . '/../../../autoload.php';
     } else {
         fwrite(STDERR, 'PsySH dependencies not found, be sure to run `composer install`.' . PHP_EOL);
         fwrite(STDERR, 'See https://getcomposer.org to get Composer.' . PHP_EOL);
@@ -132,7 +132,7 @@ unset($trace);
 if (!function_exists('Psy\bin')) {
     $argv = isset($_SERVER['argv']) ? $_SERVER['argv'] : array();
     $first = array_shift($argv);
-    if (preg_match('/req(\.exe)?$/', $first)) {
+    if (preg_match('/php(\.exe)?$/', $first)) {
         array_shift($argv);
     }
     array_unshift($argv, 'vendor/bin/psysh');
