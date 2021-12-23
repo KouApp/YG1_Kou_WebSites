@@ -1,1 +1,0 @@
-MERVE TEKİN

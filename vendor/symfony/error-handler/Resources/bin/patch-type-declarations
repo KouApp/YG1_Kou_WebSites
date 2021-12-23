@@ -25,14 +25,14 @@ if (\in_array('-h', $argv) || \in_array('--help', $argv)) {
         '          - "phpdoc" to patch only docblock annotations',
         '          - "2" to add all possible return types',
         '          - "1" to add return types but only to tests/final/internal/private methods',
-        '      - "req": the target version of PHP - e.g. "7.1" doesn\'t generate "object" types',
+        '      - "php": the target version of PHP - e.g. "7.1" doesn\'t generate "object" types',
         '      - "deprecations": "1" to trigger a deprecation notice when a child class misses a',
         '                        return type while the parent declares an "@return" annotation',
         '',
         '  SYMFONY_PATCH_TYPE_EXCLUDE',
         '      A regex matched against the full path to the class - any match will be excluded',
         '',
-        ' Example: "SYMFONY_PATCH_TYPE_DECLARATIONS=req=7.4 ./patch-type-declarations"',
+        ' Example: "SYMFONY_PATCH_TYPE_DECLARATIONS=php=7.4 ./patch-type-declarations"',
     ]);
     exit;
 }
@@ -42,16 +42,16 @@ if (false === getenv('SYMFONY_PATCH_TYPE_DECLARATIONS')) {
     echo 'No SYMFONY_PATCH_TYPE_DECLARATIONS env var set, patching type declarations in all methods (run the command with "-h" for more information).'.PHP_EOL;
 }
 
-if (is_file($autoload = __DIR__.'/../../../../autoload.req')) {
+if (is_file($autoload = __DIR__.'/../../../../autoload.php')) {
     // noop
-} elseif (is_file($autoload = __DIR__.'/../../../../../../../autoload.req')) {
+} elseif (is_file($autoload = __DIR__.'/../../../../../../../autoload.php')) {
     // noop
 } else {
     echo PHP_EOL.'  /!\ Cannot find the Composer autoloader, did you forget to run "composer install"?'.PHP_EOL;
     exit(1);
 }
 
-if (is_file($phpunitAutoload = dirname($autoload).'/bin/.phpunit/phpunit/vendor/autoload.req')) {
+if (is_file($phpunitAutoload = dirname($autoload).'/bin/.phpunit/phpunit/vendor/autoload.php')) {
     require $phpunitAutoload;
 }
 

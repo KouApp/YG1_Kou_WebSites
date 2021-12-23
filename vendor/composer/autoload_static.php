@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit04ef36c2775276892e37907f22d2e886
+class ComposerStaticInit3a50e7992bc0affe161c1192e8f901f6
 {
     public static $files = array (
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
@@ -511,13 +511,6 @@ class ComposerStaticInit04ef36c2775276892e37907f22d2e886
             'Mockery' => 
             array (
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
-            ),
-        ),
-        'H' => 
-        array (
-            'HTTP_Request2' => 
-            array (
-                0 => __DIR__ . '/..' . '/pear/http_request2',
             ),
         ),
     );
@@ -1556,23 +1549,6 @@ class ComposerStaticInit04ef36c2775276892e37907f22d2e886
         'GuzzleHttp\\RetryMiddleware' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RetryMiddleware.php',
         'GuzzleHttp\\TransferStats' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/TransferStats.php',
         'GuzzleHttp\\Utils' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Utils.php',
-        'HTTP_Request2' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2.php',
-        'HTTP_Request2_Adapter' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/Adapter.php',
-        'HTTP_Request2_Adapter_Curl' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/Adapter/Curl.php',
-        'HTTP_Request2_Adapter_Mock' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/Adapter/Mock.php',
-        'HTTP_Request2_Adapter_Socket' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/Adapter/Socket.php',
-        'HTTP_Request2_ConnectionException' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/ConnectionException.php',
-        'HTTP_Request2_CookieJar' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/CookieJar.php',
-        'HTTP_Request2_Exception' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/Exception.php',
-        'HTTP_Request2_LogicException' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/LogicException.php',
-        'HTTP_Request2_MessageException' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/MessageException.php',
-        'HTTP_Request2_MultipartBody' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/MultipartBody.php',
-        'HTTP_Request2_NotImplementedException' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/NotImplementedException.php',
-        'HTTP_Request2_Observer_Log' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/Observer/Log.php',
-        'HTTP_Request2_Observer_UncompressingDownload' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/Observer/UncompressingDownload.php',
-        'HTTP_Request2_Response' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/Response.php',
-        'HTTP_Request2_SOCKS5' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/SOCKS5.php',
-        'HTTP_Request2_SocketWrapper' => __DIR__ . '/..' . '/pear/http_request2/HTTP/Request2/SocketWrapper.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',
@@ -1975,6 +1951,7 @@ class ComposerStaticInit04ef36c2775276892e37907f22d2e886
         'Illuminate\\Database\\Eloquent\\Casts\\AsEncryptedArrayObject' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/AsEncryptedArrayObject.php',
         'Illuminate\\Database\\Eloquent\\Casts\\AsEncryptedCollection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/AsEncryptedCollection.php',
         'Illuminate\\Database\\Eloquent\\Casts\\AsStringable' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/AsStringable.php',
+        'Illuminate\\Database\\Eloquent\\Casts\\Attribute' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/Attribute.php',
         'Illuminate\\Database\\Eloquent\\Collection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Collection.php',
         'Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php',
         'Illuminate\\Database\\Eloquent\\Concerns\\HasAttributes' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php',
@@ -2686,6 +2663,7 @@ class ComposerStaticInit04ef36c2775276892e37907f22d2e886
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
         'Laravel\\Sanctum\\Contracts\\HasAbilities' => __DIR__ . '/..' . '/laravel/sanctum/src/Contracts/HasAbilities.php',
         'Laravel\\Sanctum\\Contracts\\HasApiTokens' => __DIR__ . '/..' . '/laravel/sanctum/src/Contracts/HasApiTokens.php',
+        'Laravel\\Sanctum\\Events\\TokenAuthenticated' => __DIR__ . '/..' . '/laravel/sanctum/src/Events/TokenAuthenticated.php',
         'Laravel\\Sanctum\\Exceptions\\MissingAbilityException' => __DIR__ . '/..' . '/laravel/sanctum/src/Exceptions/MissingAbilityException.php',
         'Laravel\\Sanctum\\Exceptions\\MissingScopeException' => __DIR__ . '/..' . '/laravel/sanctum/src/Exceptions/MissingScopeException.php',
         'Laravel\\Sanctum\\Guard' => __DIR__ . '/..' . '/laravel/sanctum/src/Guard.php',
@@ -3256,7 +3234,6 @@ class ComposerStaticInit04ef36c2775276892e37907f22d2e886
         'Monolog\\SignalHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/SignalHandler.php',
         'Monolog\\Test\\TestCase' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Test/TestCase.php',
         'Monolog\\Utils' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Utils.php',
-        'Net_URL2' => __DIR__ . '/..' . '/pear/net_url2/Net/URL2.php',
         'Nette\\ArgumentOutOfRangeException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
         'Nette\\DeprecatedException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
         'Nette\\DirectoryNotFoundException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
@@ -3355,7 +3332,6 @@ class ComposerStaticInit04ef36c2775276892e37907f22d2e886
         'Opis\\Closure\\SecurityProvider' => __DIR__ . '/..' . '/opis/closure/src/SecurityProvider.php',
         'Opis\\Closure\\SelfReference' => __DIR__ . '/..' . '/opis/closure/src/SelfReference.php',
         'Opis\\Closure\\SerializableClosure' => __DIR__ . '/..' . '/opis/closure/src/SerializableClosure.php',
-        'PEAR_Exception' => __DIR__ . '/..' . '/pear/pear_exception/PEAR/Exception.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
@@ -5551,10 +5527,10 @@ class ComposerStaticInit04ef36c2775276892e37907f22d2e886
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit04ef36c2775276892e37907f22d2e886::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit04ef36c2775276892e37907f22d2e886::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit04ef36c2775276892e37907f22d2e886::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit04ef36c2775276892e37907f22d2e886::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3a50e7992bc0affe161c1192e8f901f6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3a50e7992bc0affe161c1192e8f901f6::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3a50e7992bc0affe161c1192e8f901f6::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit3a50e7992bc0affe161c1192e8f901f6::$classMap;
 
         }, null, ClassLoader::class);
     }
