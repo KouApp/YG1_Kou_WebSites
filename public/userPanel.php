@@ -10,12 +10,17 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kullanıcı Paneli</title>
     <link rel="stylesheet" href="css/userPanel.css">
-
+    <link rel="stylesheet" href="css/yasin.css">
 </head>
 
 <body>
 
-
+<?php
+if (strlen($_SESSION['user']) == 0) {
+    header("Location: http://127.0.0.1:8000/login.php");
+}
+?>
+<img src="data:image/png;base64,<?php echo $_SESSION['user_profilebase64']; ?>" alt="Red dot" />
     <a href="logout.php">Cıkıs Yap</a>
     <div class="user-info-container">
         <p id="studentName">

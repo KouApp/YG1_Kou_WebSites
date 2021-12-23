@@ -13,6 +13,12 @@ session_start();
 </head>
 
 <body>
+<?php
+if (strlen($_SESSION['user']) == 0) {
+    header("Location: http://127.0.0.1:8000/login.php");
+}
+?>
+
 <a href="logout.php">Cıkıs Yap</a>
     <div class="user-info-container">
         <p id="studentName">

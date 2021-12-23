@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$user = "user";//$_SESSION['user'];
+$user = $_SESSION['user'];
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -13,7 +13,7 @@ curl_setopt_array($curl, array(
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => array('TCNo' => 1),
+    CURLOPT_POSTFIELDS => array('TCNo' => $user ),
 ));
 
 $response = curl_exec($curl);
@@ -33,8 +33,14 @@ $surname = $dilimler[1];
 $surname_count = strlen($surname);
 $subsurname = substr($surname,11,$surname_count-12);
 
+// İMAGE BASE64
+$base64 = $dilimler[2];
+$base64_count = strlen($base64);
+$subbase64 = substr($base64,22,$base64_count-25);
+
 
 $_SESSION['user_name']=$subname;
 $_SESSION['user_surname']=$subsurname;
+$_SESSION['user_profilebase64']=$subbase64;
 
 header("Location: http://127.0.0.1:8000/userPanel.php");
