@@ -24,7 +24,6 @@ if ($response == "users"):
     echo "giris basarılı";
     header("Location: http://127.0.0.1:8000/GETuserinfo.php");
 else:
-    $_SESSION['error_login']="Yanlis deneme :)";
-    header("Location: http://127.0.0.1:8000/login.php");
+    header("Location: http://127.0.0.1:8000/404.php");
 endif;
 
