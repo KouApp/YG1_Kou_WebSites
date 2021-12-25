@@ -75,7 +75,7 @@ body .container .input-buttons-container {
           align-items: center;
 }
 
-body .container .input-buttons-container a {
+body .container .input-buttons-container :nth-child(n+1) {
   background-color: #69c592;
   width: 90px;
   height: 40px;
@@ -87,7 +87,7 @@ body .container .input-buttons-container a {
   transition: 300ms;
 }
 
-body .container .input-buttons-container a:hover {
+body .container .input-buttons-container :nth-child(n+1):hover {
   background-color: #528b6c;
 }
 

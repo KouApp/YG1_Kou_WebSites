@@ -15,20 +15,26 @@ session_start();
 
 <body>
 
-<?php
-if (strlen($_SESSION['user']) == 0) {
-    header("Location: http://127.0.0.1:8000/login.php");
-}
-?>
-<img src="data:image/png;base64,<?php echo $_SESSION['user_profilebase64']; ?>" alt="Red dot" />
-    <a href="logout.php">Cıkıs Yap</a>
+    <?php
+    if (strlen($_SESSION['user']) == 0) {
+        header("Location: http://127.0.0.1:8000/login.php");
+    }
+    ?>
+
     <div class="user-info-container">
-        <p id="studentName">
-        <h1><?php echo $_SESSION['user_name']; ?>  <?php echo $_SESSION['user_surname']; ?></h1>
-        </p>
-        <p id="studentNo">
-        <h3><b><?php echo $_SESSION['user']; ?></b></h3>
-        </p>
+        <div class="user-info-img">
+            <img src="data:image/png;base64,<?php echo $_SESSION['user_profilebase64']; ?>" alt="Red dot" />
+        </div>
+        <div class="user-info-text">
+            <p id="studentName">
+            <h1><?php echo $_SESSION['user_name']; ?> <?php echo $_SESSION['user_surname']; ?></h1>
+            </p>
+            <p id="studentNo">
+            <h3><b><?php echo $_SESSION['user']; ?></b></h3>
+            </p>
+            <a href="logout.php">Çıkış Yap</a>
+        </div>
+
     </div>
 
     <div class="container">

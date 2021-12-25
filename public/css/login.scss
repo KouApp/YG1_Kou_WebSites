@@ -50,7 +50,7 @@ body {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            a {
+            :nth-child(n+1) {
                 background-color: $buttonbg;
                 width: 90px;
                 height: 40px;
@@ -60,7 +60,7 @@ body {
                 border-radius: 5px;
                 transition: 300ms;
             }   
-            a:hover {
+            :nth-child(n+1):hover {
                 background-color: $hoverbg;
             }
         }
