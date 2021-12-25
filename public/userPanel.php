@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+<?php $session_value=(isset($_SESSION['user_name']))?$_SESSION['user_name']:''; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +21,11 @@ if (strlen($_SESSION['user']) == 0) {
     header("Location: http://127.0.0.1:8000/login.php");
 }
 ?>
+<p id="p1"></p>
+<script type="text/javascript">
+    var myvar='<?php echo $session_value;?>';
+    document.getElementById("p1").innerText = myvar;
+</script>
 <img src="data:image/png;base64,<?php echo $_SESSION['user_profilebase64']; ?>" alt="Red dot" />
     <a href="logout.php">Cıkıs Yap</a>
     <div class="user-info-container">
