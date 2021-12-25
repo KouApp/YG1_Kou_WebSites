@@ -1,11 +1,10 @@
 <?php
 session_start();
-
-$user = $_SESSION['user'];
+// Abrevesion post ile alman gerekiyor.
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-    CURLOPT_URL => 'http://194.195.246.167:5000/DatabaseGetUsers',
+    CURLOPT_URL => 'http://194.195.246.167:5000/DatabaseGetSectionName',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
@@ -13,7 +12,7 @@ curl_setopt_array($curl, array(
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => array('TCNo' => $user ),
+    CURLOPT_POSTFIELDS => array('Abbreviation' => 'IIF'),// buraya post geçmen gerekiyor
 ));
 
 $response = curl_exec($curl);
@@ -22,8 +21,9 @@ curl_close($curl);
 
 $manage = json_decode($response,true);
 
-$_SESSION['user_name']=$manage['Name'];
-$_SESSION['user_surname']=$manage['Surname'];
-$_SESSION['user_profilebase64']=$manage['ProfilePhotoBase64'];
+$_SESSION['Section_1'] = $manage['1'];
+$_SESSION['Section_2'] = $manage['2'];
+$_SESSION['Section_3'] = $manage['3'];
+$_SESSION['Section_4'] = $manage['4'];
+$_SESSION['Section_5'] = $manage['5'];
 
-header("Location: http://127.0.0.1:8000/userPanel.php");
