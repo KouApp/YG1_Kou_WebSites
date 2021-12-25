@@ -36,8 +36,32 @@ body .user-info-container {
   height: auto;
   background-color: white;
   border-radius: 10px;
-  padding: 30px;
-  margin-top: 225px;
+  padding: 20px;
+  margin-top: 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .user-info-container .user-info-img img {
+  border-radius: 50%;
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  margin-right: 15px;
+}
+
+body .user-info-container .user-info-text {
+  width: auto;
+  height: auto;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,6 +72,15 @@ body .user-info-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+body .user-info-container .user-info-text a {
+  margin-top: 15px;
+  color: black;
+}
+
+body .user-info-container .user-info-text a:hover {
+  text-decoration: underline;
 }
 
 body .container {
@@ -187,7 +220,7 @@ body .container .file-container .file-row .file-column .file-button:hover {
   background-color: #528b6c;
 }
 
-body .container .file-container .apply-button {
+body .container .file-container #apply-button {
   margin-top: 15px;
   background-color: #69c592;
   width: 130px;
@@ -201,7 +234,7 @@ body .container .file-container .apply-button {
   font-size: 17px;
 }
 
-body .container .file-container .apply-button:hover {
+body .container .file-container #apply-button:hover {
   background-color: #528b6c;
 }
 /*# sourceMappingURL=userYGB.css.map */

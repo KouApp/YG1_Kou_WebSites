@@ -51,6 +51,7 @@ body .user-info-container {
 }
 
 body .user-info-container .user-info-img img {
+  border-radius: 50%;
   border: 3px solid black;
   width: 150px;
   height: 150px;
