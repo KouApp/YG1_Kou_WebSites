@@ -143,7 +143,7 @@ body {
                     }
                 }
             }
-            .apply-button {
+            #applyButton {
                 margin-top: 15px;
                 background-color: rgb(105, 197, 146);
                 width: 130px;
@@ -155,7 +155,7 @@ body {
                 transition: 300ms;
                 font-size: 17px;
             }
-            .apply-button:hover {
+            #applyButton:hover {
                 background-color: $hoverbg;
             }
         }

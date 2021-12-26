@@ -45,8 +45,8 @@ session_start();
                 <option selected disabled>Seçim Yapınız</option>
                 <option value="1">Kurum İçi Yatay Geçiş</option>
                 <option value="2">Kurumlar Arası Yatay Geçiş</option>
-                <option value="1">Merkezi Yatay Geçiş</option>
-                <option value="2">Yurtdışı Yatay Geçiş</option>
+                <option value="3">Merkezi Yatay Geçiş</option>
+                <option value="4">Yurtdışı Yatay Geçiş</option>
             </select>
         </div>
         <div class="row">
@@ -180,7 +180,7 @@ session_start();
                 </div>
             </div>
 
-            <a href="" class="apply-button">Başvur</a>
+            <input id="applyButton" type="submit" value="Başvur">
         </div>
 
     </div>

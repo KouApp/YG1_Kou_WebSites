@@ -220,7 +220,7 @@ body .container .file-container .file-row .file-column .file-button:hover {
   background-color: #528b6c;
 }
 
-body .container .file-container .apply-button {
+body .container .file-container #applyButton {
   margin-top: 15px;
   background-color: #69c592;
   width: 130px;
@@ -234,7 +234,7 @@ body .container .file-container .apply-button {
   font-size: 17px;
 }
 
-body .container .file-container .apply-button:hover {
+body .container .file-container #applyButton:hover {
   background-color: #528b6c;
 }
 /*# sourceMappingURL=userYGB.css.map */
