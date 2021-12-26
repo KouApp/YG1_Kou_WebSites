@@ -39,7 +39,6 @@ session_start();
             </p>
             <a href="logout.php">Çıkış Yap</a>
         </div>
-
     </div>
 
     <div class="container">
