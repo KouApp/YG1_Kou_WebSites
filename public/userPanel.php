@@ -18,7 +18,7 @@ session_start();
 
     <?php
     if (strlen($_SESSION['user']) == 0) {
-        header("Location: http://127.0.0.1:8000/login.php");
+        header("Location: /login.php");
     }
     ?>
     <p id="p1"></p>

@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+
+
 $user = $_SESSION['user'];
 $curl = curl_init();
 
@@ -26,4 +28,5 @@ $_SESSION['user_name']=$manage['Name'];
 $_SESSION['user_surname']=$manage['Surname'];
 $_SESSION['user_profilebase64']=$manage['ProfilePhotoBase64'];
 
-header("Location: http://127.0.0.1:8000/userPanel.php");
+header("Location: /userPanel.php");
+?>

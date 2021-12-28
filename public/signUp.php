@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +11,7 @@ session_start();
 </head>
 
 <body>
-    <?php
-    if (strlen($_SESSION['user']) == 0) {
-        header("Location: http://127.0.0.1:8000/login.php");
-    }
-    ?>
+
     <div class="container">
         <div class="signup-header">
             KAYIT OL
@@ -90,7 +84,7 @@ session_start();
         </div>
         <div class="row">
             <p>Sınıf:</p>
-            <select name="select" id="select">
+            <select name="selectclass" id="select">
                 <option selected disabled>Seçim Yapınız</option>
                 <option value="1">1. Sınıf</option>
                 <option value="2">2. Sınıf</option>

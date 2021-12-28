@@ -21,9 +21,8 @@ curl_close($curl);
 
 if ($response == "users"):
     $_SESSION['user']=$_POST['login'];
-    echo "giris basarılı";
-    header("Location: http://127.0.0.1:8000/GETuserinfo.php");
+    header("Location: /GETuserinfo.php");
 else:
-    header("Location: http://127.0.0.1:8000/404.php");
+    header("Location: /404.php");
 endif;
-
+?>
