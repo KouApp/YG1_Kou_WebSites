@@ -21,11 +21,7 @@ session_start();
         header("Location: /login.php");
     }
     ?>
-    <p id="p1"></p>
-    <script type="text/javascript">
-        var myvar = '<?php echo $session_value; ?>';
-        document.getElementById("p1").innerText = myvar;
-    </script>
+
     <div class="user-info-container">
         <div class="user-info-img">
             <img src="data:image/png;base64,<?php echo $_SESSION['user_profilebase64']; ?>" alt="Red dot" />
