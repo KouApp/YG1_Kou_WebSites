@@ -17,7 +17,7 @@ session_start();
         <div class="login-header">
             ŞİFREMİ UNUTTUM
         </div>
-        <form action="GETlogin.php" method="post">
+        <form action="GETforgot.php" method="post">
 
             <div class="input-container">
                 <input type="text" id="studentno" name="student" placeholder="Öğrenci Numarası">

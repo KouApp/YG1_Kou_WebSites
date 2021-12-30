@@ -16,70 +16,101 @@
         <div class="signup-header">
             KAYIT OL
         </div>
-
+        <form action="GETsignup.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <p>Öğrenci No:</p>
-            <input type="text" placeholder="Öğrenci No">
+            <input type="text" name="ogrNo" placeholder="Öğrenci No">
         </div>
         <div class="row">
             <p>T.C. No:</p>
-            <input type="text" placeholder="T.C. No">
+            <input type="text" name="tc" placeholder="T.C. No">
         </div>
         <div class="row">
             <p>İsim:</p>
-            <input type="text" placeholder="İsim">
+            <input type="text" name="ad" placeholder="İsim">
         </div>
         <div class="row">
             <p>Soy İsim:</p>
-            <input type="text" placeholder="Soy İsim">
+            <input type="text" name="soyad" placeholder="Soy İsim">
         </div>
         <div class="row">
             <p>E-posta:</p>
-            <input type="text" placeholder="E-posta">
+            <input type="text" name="mail" placeholder="E-posta">
         </div>
         <div class="row">
             <p>Telefon:</p>
-            <input type="text" placeholder="Telefon">
+            <input type="text" name="tel" placeholder="Telefon">
         </div>
         <div class="row">
             <p>Ev Adresi:</p>
-            <input type="text" placeholder="Ev Adresi">
+            <input type="text" name="adres" placeholder="Ev Adresi">
         </div>
         <div class="row">
             <p>iş Adresi:</p>
-            <input type="text" placeholder="İş Adresi">
+            <input type="text" name="adress" placeholder="İş Adresi">
         </div>
         <div class="row">
             <p>Doğum Tarihi:</p>
-            <input type="text" placeholder="Doğum Tarihi">
+            <input type="text" name="dgmtarihi" placeholder="Doğum Tarihi">
         </div>
         <div class="row">
             <p>Üniversite:</p>
-            <select name="select" id="select">
+            <select name="select" id="select" >
                 <option selected disabled>Seçim Yapınız</option>
-                <option value="1">Kocaeli Üniversitesi</option>
+                <option value="Kocaeli Üniversitesi">Kocaeli Üniversitesi</option>
             </select>
         </div>
+
         <div class="row">
             <p>Fakülte:</p>
-            <select name="select" id="select">
+            <select name="select2" id="select2" onChange="uni(this);">
                 <option selected disabled>Seçim Yapınız</option>
-                <option value="1">Teknoloji Fakültesi</option>
-                <option value="2">Fen-Edebiyat Fakültesi</option>
-                <option value="3">Hukuk Fakültesi</option>
-                <option value="4">Mühendislik Fakültesi</option>
-                <option value="5">Sosyal Bilimler Fakültesi</option>
+                <option value="Teknoloji Fakültesi">Teknoloji Fakültesi</option>
+                <option value="Fen-Edebiyat Fakültesi">Fen-Edebiyat Fakültesi</option>
+                <option value="Hukuk Fakültesi">Hukuk Fakültesi</option>
+                <option value="Mühendislik Fakültesi">Mühendislik Fakültesi</option>
+                <option value="Sosyal Bilimler Fakültesi">Sosyal Bilimler Fakültesi</option>
             </select>
         </div>
+            <script type="text/javascript">
+                function uni(sel) {
+                    addOpt(sel.options[sel.selectedIndex].text);
+                }
+                function addOpt(deg)
+                {
+                    let tekno = ["burası","teknoloji","fakultesi"];
+                    let fen = ["burası","fen","fakultesi"];
+                    let hukuk = ["burası","hukuk","fakultesi"];
+                    removeOptions(document.getElementById('select3'));
+                    if(deg =="Teknoloji Fakültesi"){
+                        for (var i=0; i < tekno.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select3").options.add(opt);
+                            opt.text = tekno[i];
+                            opt.value = tekno[i];
+                        }
+                    }
+                    if(deg =="Fen-Edebiyat Fakültesi"){
+                        for (var i=0; i < fen.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select3").options.add(opt);
+                            opt.text = fen[i];
+                            opt.value = fen[i];
+                        }
+                    }
+
+                }
+                function removeOptions(selectElement) {
+                    var i, L = selectElement.options.length - 1;
+                    for(i = L; i >= 0; i--) {
+                        selectElement.remove(i);
+                    }
+                }
+            </script>
         <div class="row">
             <p>Bölüm:</p>
-            <select name="select" id="select">
-                <option selected disabled>Seçim Yapınız</option>
-                <option value="1">Yasin</option>
-                <option value="2">Buraya</option>
-                <option value="3">Yardım</option>
-                <option value="4">Etmen</option>
-                <option value="5">Lazım</option>
+            <select name="select3" id="select3">
+
             </select>
         </div>
         <div class="row">
@@ -94,14 +125,16 @@
         </div>
         <div class="row">
             <p>Şifre:</p>
-            <input type="password" placeholder="Şifre">
+            <input type="password" name="pass" placeholder="Şifre">
         </div>
 
-        <div class="button-container">
-            <input id="signUpButton" type="submit" value="Kayıt Ol">
-            <input id="addPhotoButton" type="submit" value="Fotoğraf Yükle">
-        </div>
+            <div class="button-container">
 
+                <input id="signUpButton" type="submit" name="gonder" value="Kayıt Ol">
+                <input id="addPhotoButton" type="file" name="dosya" value="Fotoğraf Yükle">
+
+            </div>
+        </form>
 
     </div>
 </body>

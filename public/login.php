@@ -28,15 +28,18 @@ session_start();
 
             <div class="input-buttons-container">
                 <input id="loginButton" type="submit" value="Giriş Yap">
-                <input id="registerButton" type="button" value="Kayıt Ol">
+
+
+                <input id="registerButton" type="button" value="Kayıt Ol" onclick="location.href='signUp.php';">
+
             </div>
 
             <div class="forgot-button-container">
                 <div class="forgot-button">
-                    <a href="" id="forgotButton">Şifremi Unuttum</a>
+                    <a href="forgotPassword.php" id="forgotButton">Şifremi Unuttum</a>
                 </div>
             </div>
-        </form>
+    </form>
     </div>
 
 </body>

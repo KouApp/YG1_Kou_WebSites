@@ -1,22 +1,44 @@
 <?php
-session_start();
+function selam_ver($deg) {
+    return $deg;
+}
 ?>
-
-
 <html>
 
-<body>
-<h1 id="header"></h1>
+<head>
+    <title>
+        How to change the text of
+        a label using JavaScript ?
+    </title>
+</head>
 
+<body style="text-align:center;">
 
-<?php
-$_SESSION['yenselect']=$_POST['select'];
-$_SESSION['ogrno']=$_POST['ogrno'];
-echo $_SESSION['yenselect'];
-echo $_SESSION['ogrno'];
-?>
+<h1 style="color:green;">
+    GeeksforGeeks
+</h1>
 
+<h4>
+    Click on the button to change
+    the text of a label
+</h4>
+
+<label id = "GFG">
+    Welcome to GeeksforGeeks
+</label>
+
+<br>
+
+<button onclick="myGeeks()">
+    Click Here!
+</button>
+
+<script>
+    function myGeeks() {
+        document.getElementById('GFG').innerHTML
+            = <?php echo selam_ver("awd") ?>;
+    }
+</script>
 </body>
-
 
 </html>
