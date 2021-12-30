@@ -42,7 +42,7 @@ session_start();
             GEÇMİŞ BAŞVURULAR
         </div>
         <div class="new-application">
-            <a href="userYGB.php" type="button" id="newAppButton">Yeni Başvuru</a>
+            <a href="appSelect.php" type="button" id="newAppButton">Yeni Başvuru</a>
         </div>
     </div>
 </body>
