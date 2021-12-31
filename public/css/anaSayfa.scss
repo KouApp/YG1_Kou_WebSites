@@ -1,0 +1,126 @@
+$color1:#26272d;
+$color2:rgba(255,255,255,0.5);
+$color3:#fff;
+$color4:#9fa3a7;
+$color5:#6fc754;
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: $color1;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: $color1;
+    .hero { 
+        background: url(../images/hero.jpg) no-repeat center / cover; 
+        height: 100%;
+        width: 100%;
+        display: table;
+        position: relative;
+    }
+    .overlay:before {
+        content: '';
+        background-color: $color2;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+      .hero-content {
+        display: table-cell;
+        vertical-align: middle;
+        padding-top: 75px;
+        }
+        .hero-text {
+            max-width: 890px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+            text-align: center;
+        }
+        .hero-text h1 {
+            position: relative;
+            margin: 0;
+            color:$color1;
+        }
+        
+        .hero-text p {
+            position: relative;
+            margin: 45px 0 30px;
+            font-size: 20px;
+            color: $color1;
+        }
+        
+        .hero-text .btn {
+            position: relative;
+            background-color: transparent;
+        }
+        
+        .hero-text .btn:hover {
+            background-color:$color1;
+            color: $color3;
+        }
+        .hero-content {
+            color: $color3;
+        }
+            a {
+                transition: all 0.25s ease-in-out;
+                cursor: pointer;
+                color: $color4;
+            }
+            
+            a:focus,
+            a:hover {
+                color: $color5;
+                outline: 0 none;
+                text-decoration: none;
+            }
+            
+            p {
+                margin-bottom: 0;
+                font-size: 14px;
+                font-weight: 300;
+                color: $color4;
+                line-height: 22px;
+                margin-top: 40px;
+            }
+            
+            h1 {
+                font-size: 80px;
+            }
+
+            .btn {
+                line-height: 50px;
+                min-width: 200px;
+                font-size: 20px;
+                font-weight: 300;
+                border: 0;
+                border-radius: 50px;
+                color: $color1;
+                background-color: $color3;
+                padding: 0;
+                text-decoration: none;
+                transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+            }
+
+            .btn-border {
+                border: 1px solid $color1;
+            }
+            .btn:hover,
+            button.btn:hover,
+            .btn:focus,
+            button.btn:focus {
+            background-color: $color1;
+            color: $color3;
+            }           
+}
