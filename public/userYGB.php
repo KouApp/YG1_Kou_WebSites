@@ -39,7 +39,7 @@ session_start();
             YATAY GEÇİŞ BAŞVURUSU
         </div>
         <form action="GETygb.php" method="post" enctype="multipart/form-data">
-<<<<<<< HEAD
+
         <div class="row">
             <p>Başvuru Türü:</p>
             <select name="select" id="select">
@@ -161,7 +161,7 @@ session_start();
                     <p name="transkript-file">Yüklenmedi</p>
                     <input type="file" name="trans" class="file-button"></input>
                 </div>
-=======
+
             <div class="row">
                 <p>Başvuru Türü:</p>
                 <select name="select" id="select">
@@ -283,7 +283,7 @@ session_start();
                         <p name="transkript-file">Yüklenmedi</p>
                         <input type="file" name="trans" class="file-button"></input>
                     </div>
->>>>>>> main
+
 
                     <div class="file-column">
                         <h3><b>Disiplin Cezası</b></h3>
@@ -305,15 +305,14 @@ session_start();
                         <input type="file" name="dekont" class="file-button"></input>
                     </div>
                 </div>
-<<<<<<< HEAD
+
                 <div class="file-column">
                     <h3><b>Basvuru belgesi</b></h3>
                     <p name="decont-file">Yüklenmedi</p>
                     <input type="file" name="basvur" class="file-button"></input>
                 </div>
             </div>
-=======
->>>>>>> main
+
 
                 <input type="submit" class="apply-button"></input>
             </div>
