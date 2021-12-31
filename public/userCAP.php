@@ -146,11 +146,12 @@ session_start();
                 }
             </script>
         <div class="file-container">
-            <input href="" id="fileButton" type="submit" value="Belge Gönder">
-            <input href="" id="transkriptButton" type="submit" value="Transkript">
+            <input href="" id="fileButton" type="submit" value="Belge indir">
         </div>
-
+        </form>
+        <form action="GETcap2.php" method="post" enctype="multipart/form-data">
         <div class="file-container2">
+            <input href="" id="transkriptButton" name="dosya" type="file" value="Transkript yükle">
             <input href="" id="applyButton" class="apply-button" type="submit" value="Başvur">
         </div>
         </form>

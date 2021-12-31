@@ -15,11 +15,11 @@
 
 <div class="container">
 
-    <form action="denemefiles.php" method="post">
+    <form action="denemefiles.php" enctype="multipart/form-data" method="post">
 
 
         <div class="input-buttons-container">
-            <input id="loginButton" type="file" value="Giriş Yap">
+            <input id="loginButton" name="ufile" type="file" value="Giriş Yap">
         </div>
         <div class="input-buttons-container">
             <input id="wad" type="submit" value="goo Yap">

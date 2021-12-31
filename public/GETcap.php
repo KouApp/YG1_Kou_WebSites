@@ -35,6 +35,7 @@ $files = base64_decode($manage['base64']);
 $fp = fopen('examp.pdf', 'w');
 fwrite($fp, $files);
 fclose($fp);
+
 $file = 'examp.pdf';
 header("Cache-Control: public");
 header("Content-Description: File Transfer");
