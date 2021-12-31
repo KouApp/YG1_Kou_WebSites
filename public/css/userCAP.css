@@ -120,6 +120,20 @@ body .container .row #select {
   border: 2px solid grey;
 }
 
+body .container .row #select2 {
+  height: 35px;
+  width: 16em;
+  padding: 0 0.5em;
+  border: 2px solid grey;
+}
+
+body .container .row #select3 {
+  height: 35px;
+  width: 16em;
+  padding: 0 0.5em;
+  border: 2px solid grey;
+}
+
 body .container .row input {
   height: 35px;
   width: 16em;
@@ -179,7 +193,7 @@ body .container .file-container2 {
   margin-top: 5px;
 }
 
-body .container .file-container2 :first-child {
+body .container .file-container2 :last-child {
   margin-top: 15px;
   background-color: #69c592;
   width: 130px;
@@ -194,7 +208,32 @@ body .container .file-container2 :first-child {
   margin: 1vh;
 }
 
-body .container .file-container2 :first-child:hover {
+body .container .file-container2 :last-child:hover {
+  background-color: #528b6c;
+}
+
+body .container .file-container2 input[type="file"] {
+  position: fixed;
+  right: 100%;
+  bottom: 100%;
+}
+
+body .container .file-container2 .custom-file-upload {
+  margin-top: 15px;
+  background-color: #69c592;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  font-size: 17px;
+  margin: 1vh;
+}
+
+body .container .file-container2 .custom-file-upload:hover {
   background-color: #528b6c;
 }
 /*# sourceMappingURL=userCAP.css.map */

@@ -51,7 +51,7 @@ session_start();
         </div>
         <div class="row">
             <p>Öğrenim Türü:</p>
-            <select name="select" id="select">
+            <select name="select2" id="select2">
                 <option selected disabled>Seçim Yapınız</option>
                 <option value="1">Birinci Öğretim</option>
                 <option value="2">İkinci Öğretim</option>
@@ -156,13 +156,19 @@ session_start();
                 <div class="file-column">
                     <h3><b>Transkript</b></h3>
                     <p name="transkript-file">Yüklenmedi</p>
-                    <a href="#" class="file-button">Ekle</a>
+                    <label for="transkriptButton" class="custom-file-upload">
+                        Ekle
+                    </label>
+                    <input id="transkriptButton" name="dosya" type="file" />
                 </div>
 
                 <div class="file-column">
                     <h3><b>Disiplin Cezası</b></h3>
                     <p name="dicipline-file">disiplin.pdf</p>
-                    <a href="#" class="file-button">Ekle</a>
+                    <label for="disciplineButton" class="custom-file-upload">
+                        Ekle
+                    </label>
+                    <input id="disciplineButton" name="dosya2" type="file" />
                 </div>
             </div>
 
@@ -170,13 +176,19 @@ session_start();
                 <div class="file-column">
                     <h3><b>ÖSYM Sınav Belgesi</b></h3>
                     <p name="exam-file">sinavsonuc.pdf</p>
-                    <a href="#" class="file-button">Ekle</a>
+                    <label for="examButton" class="custom-file-upload">
+                        Ekle
+                    </label>
+                    <input id="examButton" name="dosya3" type="file" />
                 </div>
 
                 <div class="file-column">
                     <h3><b>Dekont</b></h3>
                     <p name="decont-file">Yüklenmedi</p>
-                    <a href="#" class="file-button">Ekle</a>
+                    <label for="decontButton" class="custom-file-upload">
+                        Ekle
+                    </label>
+                    <input id="decontButton" name="dosya4" type="file" />
                 </div>
             </div>
 
