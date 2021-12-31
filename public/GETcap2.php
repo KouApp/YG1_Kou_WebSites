@@ -2,19 +2,20 @@
 session_start();
 function files()
 {
-    if (isset($_FILES['dosya'])) {
-        $hata = $_FILES['dosya']['error'];
-        if ($hata != 0) {
-            return "error";
-        } else {
-            $dosya = $_FILES['dosya']['tmp_name'];
 
-            copy($dosya, 'dosyalar/' . $_FILES['dosya']['name']);
-            $path = 'dosyalar/'. $_FILES['dosya']['name'];
-            $data = file_get_contents($path);
-            $base64 = base64_encode($data);
-            return $base64;
+    if(isset($_FILES["dosya"])) {
+        $tmp_name = $_FILES["dosya"]["tmp_name"];
+        $path = 'dosyalar/'. $_FILES['dosya']['name'];
+
+        if (move_uploaded_file($tmp_name, $path)) {
+            echo 'Dosya yüklendi.';
+            $b64Doc = base64_encode(file_get_contents($path));
+            return $b64Doc;
+        } else {
+            echo 'Dosya yüklemede hata.';
         }
+        unlink($tmp_name);
+
     }
 }
 $res = files();
@@ -47,7 +48,7 @@ else:
     echo $response;
 
 
-    unlink('dosyalar/'. $_FILES['dosya']['name']);
+    //unlink('dosyalar/'. $_FILES['dosya']['name']);
     /*
     if($response=="True"):
         header("Location: /login.php");
