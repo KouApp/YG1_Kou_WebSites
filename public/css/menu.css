@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body #logo {
+  float: left;
+  height: 70px;
+  width: 70px;
+}
+
+body .navigation {
+  background-color: #4bdfa1;
+  margin: 0 auto;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+body .navigation ul {
+  margin: 0px;
+  padding-right: 0px;
+  text-align: center;
+  list-style: none;
+}
+
+body .navigation li {
+  color: #ffffff;
+  background: #4bdfa1;
+  display: block;
+  float: right;
+  padding: 25px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+body .navigation li a {
+  color: #ffffff;
+}
+
+body .navigation a:link {
+  text-decoration: none;
+}
+
+body .navigation a:visited {
+  text-decoration: none;
+}
+
+body .navigation li:hover, body .navigation li:focus-within {
+  background: #12d63c;
+  cursor: pointer;
+}
+
+body .navigation li:focus-within a {
+  outline: none;
+}
+/*# sourceMappingURL=menu.css.map */
