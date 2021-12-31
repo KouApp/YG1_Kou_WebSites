@@ -68,6 +68,27 @@ body .container .row #select {
   border: 2px solid grey;
 }
 
+body .container .row #select2 {
+  height: 35px;
+  width: 16em;
+  padding: 0 0.5em;
+  border: 2px solid grey;
+}
+
+body .container .row #select3 {
+  height: 35px;
+  width: 16em;
+  padding: 0 0.5em;
+  border: 2px solid grey;
+}
+
+body .container .row #selectclass {
+  height: 35px;
+  width: 16em;
+  padding: 0 0.5em;
+  border: 2px solid grey;
+}
+
 body .container .row input {
   height: 35px;
   width: 16em;
@@ -87,7 +108,7 @@ body .container .button-container {
       justify-content: space-around;
 }
 
-body .container .button-container :nth-child(n+1) {
+body .container .button-container :first-child {
   margin-top: 15px;
   background-color: #69c592;
   width: 130px;
@@ -101,7 +122,31 @@ body .container .button-container :nth-child(n+1) {
   font-size: 17px;
 }
 
-body .container .button-container :nth-child(n+1):hover {
+body .container .button-container :first-child:hover {
+  background-color: #528b6c;
+}
+
+body .container .button-container input[type="file"] {
+  position: fixed;
+  right: 100%;
+  bottom: 100%;
+}
+
+body .container .button-container .custom-file-upload {
+  margin-top: 15px;
+  background-color: #69c592;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  font-size: 17px;
+}
+
+body .container .button-container .custom-file-upload:hover {
   background-color: #528b6c;
 }
 /*# sourceMappingURL=signUp.css.map */

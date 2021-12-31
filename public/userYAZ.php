@@ -64,7 +64,7 @@ session_start();
         </div>
         <div class="row">
             <p>Bölüm:</p>
-            <select name="select" id="select">
+            <select name="select2" id="select2">
                 <option selected disabled>Seçim Yapınız</option>
                 <option value="1">Yasin</option>
                 <option value="2">Buraya</option>
@@ -100,7 +100,11 @@ session_start();
 
         <div class="file-container">
             <input href="" id="applyButton" type="submit" value="Başvur">
-            <input href="" id="fileButton" type="submit" value="Belge Gönder">
+
+            <label for="fileButton" class="custom-file-upload">
+                Belge Gönder
+            </label>
+            <input id="fileButton" name="dosya" type="file" />
         </div>
 
     </div>

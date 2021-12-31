@@ -3,7 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +11,9 @@ session_start();
     <title>İntibak Başvurusu</title>
     <link rel="stylesheet" href="css/intibak.css">
 </head>
+
 <body>
-<?php
+    <?php
     if (strlen($_SESSION['user']) == 0) {
         header("Location: http://127.0.0.1:8000/login.php");
     }
@@ -59,7 +60,7 @@ session_start();
         </div>
         <div class="row">
             <p>Bölüm:</p>
-            <select name="select" id="select">
+            <select name="select2" id="select2">
                 <option selected disabled>Seçim Yapınız</option>
                 <option value="1">Bölüm 1</option>
                 <option value="2">Bölüm 2</option>
@@ -86,9 +87,15 @@ session_start();
             <input type="text" placeholder="Başvurulan Bölüm">
         </div>
         <div class="file-container">
-            <input href="" class="apply-button" type="submit" value="Dilekçe Oluştur">
+
+            <label for="dilekceButton" class="custom-file-upload">
+                Dilekçe Oluştur
+            </label>
+            <input id="dilekceButton" name="dosya" type="file" />
+
             <input href="" class="apply-button" type="submit" value="Dilekçe Yolla">
         </div>
     </div>
 </body>
+
 </html>

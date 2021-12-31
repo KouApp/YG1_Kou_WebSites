@@ -82,6 +82,12 @@ body {
                 padding: 0 0.5em;
                 border: 2px solid grey;
             }
+            #select2 {
+                height: 35px;
+                width: 16em;
+                padding: 0 0.5em;
+                border: 2px solid grey;
+            }
             input {
                 height: 35px;
                 width: 16em;
@@ -109,6 +115,27 @@ body {
                 margin: 1vh;
             }
             .apply-button:hover {
+                background-color: $hoverbg;
+            }
+            input[type="file"] {
+                position: fixed;
+                right: 100%;
+                bottom: 100%;
+            }
+            .custom-file-upload {
+                margin-top: 15px;
+                background-color: rgb(105, 197, 146);
+                width: 130px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                color: white;
+                border-radius: 5px;
+                transition: 300ms;
+                font-size: 17px;
+                margin: 1vh;
+            }
+            .custom-file-upload:hover {
                 background-color: $hoverbg;
             }
         }
