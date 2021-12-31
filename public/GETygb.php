@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-$_POST['user'];
-
-
 
 
 function gonder(){
@@ -51,6 +48,18 @@ function gonder(){
 
     $response = curl_exec($curl);
     curl_close($curl);
-}
+    return $response;
 
+}
+$res = gonder();
+$manage = json_decode($res,true);
+include 'BASE64.php';
+
+if($res =="Kayitli"):
+    echo "kayit var";
+else:
+    $name = base64topdf($manage['base64'],"sahin");
+    filedownload($name);
+endif;
+?>
 
