@@ -20,8 +20,6 @@ curl_close($curl);
 
 
 $manage = json_decode($response,true);
-
-
 $files = base64_decode($manage[1]['Base64']);
 
 $fp = fopen('examp.pdf', 'w');
