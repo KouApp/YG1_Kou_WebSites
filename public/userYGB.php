@@ -38,162 +38,153 @@ session_start();
         <div class="ygb-header">
             YATAY GEÇİŞ BAŞVURUSU
         </div>
-
-        <div class="row">
-            <p>Başvuru Türü:</p>
-            <select name="select" id="select">
-                <option selected disabled>Seçim Yapınız</option>
-                <option value="1">Kurum İçi Yatay Geçiş</option>
-                <option value="2">Kurumlar Arası Yatay Geçiş</option>
-                <option value="1">Merkezi Yatay Geçiş</option>
-                <option value="2">Yurtdışı Yatay Geçiş</option>
-            </select>
-        </div>
-        <div class="row">
-            <p>Öğrenim Türü:</p>
-            <select name="select2" id="select2">
-                <option selected disabled>Seçim Yapınız</option>
-                <option value="1">Birinci Öğretim</option>
-                <option value="2">İkinci Öğretim</option>
-            </select>
-        </div>
-        <div class="row">
-            <p>Ad Soyad:</p>
-            <input type="text" placeholder="Ad Soyad">
-        </div>
-        <div class="row">
-            <p>T.C. No:</p>
-            <input type="text" placeholder="T.C. No">
-        </div>
-        <div class="row">
-            <p>Doğum Tarihi:</p>
-            <input type="text" placeholder="Doğum Tarihi">
-        </div>
-        <div class="row">
-            <p>Telefon:</p>
-            <input type="text" placeholder="Telefon">
-        </div>
-        <div class="row">
-            <p>E-Posta:</p>
-            <input type="text" placeholder="E-Posta">
-        </div>
-        <div class="row">
-            <p>Adres:</p>
-            <input type="text" placeholder="Adres">
-        </div>
-        <div class="row">
-            <p>Kayıtlı Üniversite:</p>
-            <input type="text" placeholder="Kayıtlı Üniversite">
-        </div>
-        <div class="row">
-            <p>Kayıtlı Fakülte:</p>
-            <input type="text" placeholder="Kayıtlı Fakülte">
-        </div>
-        <div class="row">
-            <p>Kayıtlı Bölüm:</p>
-            <input type="text" placeholder="Kayıtlı Bölüm">
-        </div>
-        <div class="row">
-            <p>Öğrenci No:</p>
-            <input type="text" placeholder="Öğrenci No">
-        </div>
-        <div class="row">
-            <p>Yerleştiği Yıl:</p>
-            <input type="text" placeholder="Yerleştiği Yıl">
-        </div>
-        <div class="row">
-            <p>Başvurulan Fakülte:</p>
-            <input type="text" placeholder="Başvurulan Fakülte">
-        </div>
-        <div class="row">
-            <p>Başvurulan Bölüm:</p>
-            <input type="text" placeholder="Başvurulan Bölüm">
-        </div>
-        <div class="row">
-            <p>Ev Telefonu:</p>
-            <input type="text" placeholder="Ev Telefonu">
-        </div>
-        <div class="row">
-            <p>Tarih:</p>
-            <input type="text" placeholder="Tarih">
-        </div>
-        <div class="row">
-            <p>Mevcut Sınıf:</p>
-            <input type="text" placeholder="Mevcut Sınıf">
-        </div>
-        <div class="row">
-            <p>Mevcut Yarıyıl:</p>
-            <input type="text" placeholder="Mevcut Yarıyıl">
-        </div>
-        <div class="row">
-            <p>Not Ortalaması:</p>
-            <input type="text" placeholder="Not Ortalaması">
-        </div>
-        <div class="row">
-            <p>Kayıt Olunan Puan:</p>
-            <input type="text" placeholder="Kayıt Olunan Puan">
-        </div>
-        <div class="row">
-            <p>Başvurulan Puan:</p>
-            <input type="text" placeholder="Başvurulan Puan">
-        </div>
-        <div class="row">
-            <p>Başvurulan Öğrenim:</p>
-            <input type="text" placeholder="Başvurulan Öğrenim">
-        </div>
-        <div class="row">
-            <p>Yabancı Dil Puanı:</p>
-            <input type="text" placeholder="Yabancı Dil Puanı">
-        </div>
-        <div class="row">
-            <p>Disiplin Cezası:</p>
-            <input type="text" placeholder="Disiplin Cezası">
-        </div>
-
-        <div class="file-container">
-            <p class="file-header">GEREKEN DOSYALAR</p>
-            <div class="file-row">
-                <div class="file-column">
-                    <h3><b>Transkript</b></h3>
-                    <p name="transkript-file">Yüklenmedi</p>
-                    <label for="transkriptButton" class="custom-file-upload">
-                        Ekle
-                    </label>
-                    <input id="transkriptButton" name="dosya" type="file" />
-                </div>
-
-                <div class="file-column">
-                    <h3><b>Disiplin Cezası</b></h3>
-                    <p name="dicipline-file">disiplin.pdf</p>
-                    <label for="disciplineButton" class="custom-file-upload">
-                        Ekle
-                    </label>
-                    <input id="disciplineButton" name="dosya2" type="file" />
-                </div>
+        <form action="GETygb.php" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <p>Başvuru Türü:</p>
+                <select name="select" id="select">
+                    <option selected disabled>Seçim Yapınız</option>
+                    <option value="1">Kurum İçi Yatay Geçiş</option>
+                    <option value="2">Kurumlar Arası Yatay Geçiş</option>
+                    <option value="1">Merkezi Yatay Geçiş</option>
+                    <option value="2">Yurtdışı Yatay Geçiş</option>
+                </select>
             </div>
-
-            <div class="file-row">
-                <div class="file-column">
-                    <h3><b>ÖSYM Sınav Belgesi</b></h3>
-                    <p name="exam-file">sinavsonuc.pdf</p>
-                    <label for="examButton" class="custom-file-upload">
-                        Ekle
-                    </label>
-                    <input id="examButton" name="dosya3" type="file" />
-                </div>
-
-                <div class="file-column">
-                    <h3><b>Dekont</b></h3>
-                    <p name="decont-file">Yüklenmedi</p>
-                    <label for="decontButton" class="custom-file-upload">
-                        Ekle
-                    </label>
-                    <input id="decontButton" name="dosya4" type="file" />
-                </div>
+            <div class="row">
+                <p>Öğrenim Türü:</p>
+                <select name="select2" id="select2">
+                    <option selected disabled>Seçim Yapınız</option>
+                    <option value="1">Birinci Öğretim</option>
+                    <option value="2">İkinci Öğretim</option>
+                </select>
             </div>
+            <div class="row">
+                <p>Ad Soyad:</p>
+                <input type="text" name="adsoyad" placeholder="Ad Soyad">
+            </div>
+            <div class="row">
+                <p>T.C. No:</p>
+                <input type="text" name="tcno" placeholder="T.C. No">
+            </div>
+            <div class="row">
+                <p>Doğum Tarihi:</p>
+                <input type="text" name="dgmtrh" placeholder="Doğum Tarihi">
+            </div>
+            <div class="row">
+                <p>Telefon:</p>
+                <input type="text" name="tel" placeholder="Telefon">
+            </div>
+            <div class="row">
+                <p>E-Posta:</p>
+                <input type="text" name="mail" placeholder="E-Posta">
+            </div>
+            <div class="row">
+                <p>Adres:</p>
+                <input type="text" name="adres" placeholder="Adres">
+            </div>
+            <div class="row">
+                <p>Kayıtlı Üniversite:</p>
+                <input type="text" name="kytuni" placeholder="Kayıtlı Üniversite">
+            </div>
+            <div class="row">
+                <p>Kayıtlı Fakülte:</p>
+                <input type="text" name="kytfac" placeholder="Kayıtlı Fakülte">
+            </div>
+            <div class="row">
+                <p>Kayıtlı Bölüm:</p>
+                <input type="text" name="kytbolm" placeholder="Kayıtlı Bölüm">
+            </div>
+            <div class="row">
+                <p>Öğrenci No:</p>
+                <input type="text" name="ogrno" placeholder="Öğrenci No">
+            </div>
+            <div class="row">
+                <p>Yerleştiği Yıl:</p>
+                <input type="text" name="yrlsyıl" placeholder="Yerleştiği Yıl">
+            </div>
+            <div class="row">
+                <p>Başvurulan Fakülte:</p>
+                <input type="text" name="bsvrfac" placeholder="Başvurulan Fakülte">
+            </div>
+            <div class="row">
+                <p>Başvurulan Bölüm:</p>
+                <input type="text" name="basvrbol" placeholder="Başvurulan Bölüm">
+            </div>
+            <div class="row">
+                <p>Ev Telefonu:</p>
+                <input type="text" name="evtel" placeholder="Ev Telefonu">
+            </div>
+            <div class="row">
+                <p>Tarih:</p>
+                <input type="text" name="tarih" placeholder="Tarih">
+            </div>
+            <div class="row">
+                <p>Mevcut Sınıf:</p>
+                <input type="text" name="mvctsnf" placeholder="Mevcut Sınıf">
+            </div>
+            <div class="row">
+                <p>Mevcut Yarıyıl:</p>
+                <input type="text" placeholder="Mevcut Yarıyıl">
+            </div>
+            <div class="row">
+                <p>Not Ortalaması:</p>
+                <input type="text" name="notort" placeholder="Not Ortalaması">
+            </div>
+            <div class="row">
+                <p>Kayıt Olunan Puan:</p>
+                <input type="text" name="puan" placeholder="Kayıt Olunan Puan">
+            </div>
+            <div class="row">
+                <p>Başvurulan Puan:</p>
+                <input type="text" name="bsvrpuan" placeholder="Başvurulan Puan">
+            </div>
+            <div class="row">
+                <p>Başvurulan Öğrenim:</p>
+                <input type="text" name="bsvrornm" placeholder="Başvurulan Öğrenim">
+            </div>
+            <div class="row">
+                <p>Yabancı Dil Puanı:</p>
+                <input type="text" name="ybncpuan" placeholder="Yabancı Dil Puanı">
+            </div>
+            <div class="row">
+                <p>Disiplin Cezası:</p>
+                <input type="text" name="dsplnceza" placeholder="Disiplin Cezası">
+            </div>
+            <input type="submit" class="apply-button" value="basvuru indir"></input>
+        </form>
+        <form action="GETygb.php" method="post" enctype="multipart/form-data">
+            <div class="file-container">
+                <p class="file-header">GEREKEN DOSYALAR</p>
+                <div class="file-row">
+                    <div class="file-column">
+                        <h3><b>Transkript</b></h3>
+                        <p name="transkript-file">Yüklenmedi</p>
+                        <input type="file" name="trans" class="file-button"></input>
+                    </div>
 
-            <a href="" class="apply-button">Başvur</a>
-        </div>
+                    <div class="file-column">
+                        <h3><b>Disiplin Cezası</b></h3>
+                        <p name="dicipline-file">disiplin.pdf</p>
+                        <input type="file" name="disiplin" class="file-button"></input>
+                    </div>
+                </div>
+
+                <div class="file-row">
+                    <div class="file-column">
+                        <h3><b>ÖSYM Sınav Belgesi</b></h3>
+                        <p name="exam-file">sinavsonuc.pdf</p>
+                        <input type="file" name="sinav" class="file-button"></input>
+                    </div>
+
+                    <div class="file-column">
+                        <h3><b>Dekont</b></h3>
+                        <p name="decont-file">Yüklenmedi</p>
+                        <input type="file" name="dekont" class="file-button"></input>
+                    </div>
+                </div>
+
+                <input type="submit" class="apply-button"></input>
+            </div>
+        </form>
 
     </div>
 
