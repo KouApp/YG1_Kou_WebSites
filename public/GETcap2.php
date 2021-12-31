@@ -1,12 +1,11 @@
 <?php
 session_start();
+
 function files()
 {
-
     if(isset($_FILES["dosya"])) {
         $tmp_name = $_FILES["dosya"]["tmp_name"];
         $path = 'dosyalar/'. $_FILES['dosya']['name'];
-
         if (move_uploaded_file($tmp_name, $path)) {
             echo 'Dosya yüklendi.';
             $b64Doc = base64_encode(file_get_contents($path));
@@ -15,17 +14,21 @@ function files()
             echo 'Dosya yüklemede hata.';
         }
         unlink($tmp_name);
-
     }
 }
+
 $res = files();
 if ($res == "error"):
     echo "error";
 else:
     $type = $_FILES['dosya']['type'];
     $name = $_FILES['dosya']['name'];
-    $curl = curl_init();
+    echo $type;
 
+    yolla($res,$name,$type);
+endif;
+function yolla($res,$name,$type){
+    $curl = curl_init();
     curl_setopt_array($curl, array(
         CURLOPT_URL => 'http://194.195.246.167:5000/DatabaseSaveFile',
         CURLOPT_RETURNTRANSFER => true,
@@ -48,14 +51,15 @@ else:
     echo $response;
 
 
-    //unlink('dosyalar/'. $_FILES['dosya']['name']);
-    /*
+    unlink('dosyalar/'. $_FILES['dosya']['name']);
+    echo $response;
+
     if($response=="True"):
         header("Location: /login.php");
     else:
         header("Location: /404.php");
-    endif;*/
-endif;
+    endif;
+}
 ?>
 
 
