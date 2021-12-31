@@ -93,48 +93,18 @@ body .container {
   margin-bottom: 250px;
 }
 
-body .container .ygb-header {
+body .container .dgs-header {
   text-align: center;
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 30px;
 }
 
-body .container .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 25px;
+body .container .paragraph {
+  text-align: justify;
 }
 
-body .container .row #select {
-  height: 35px;
-  width: 16em;
-  padding: 0 0.5em;
-  border: 2px solid grey;
-}
-
-body .container .row #select2 {
-  height: 35px;
-  width: 16em;
-  padding: 0 0.5em;
-  border: 2px solid grey;
-}
-
-body .container .row input {
-  height: 35px;
-  width: 16em;
-  padding: 0 0.5em;
-  border: 2px solid grey;
-}
-
-body .container .file-container {
+body .container .first-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,19 +112,18 @@ body .container .file-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 35px;
+  margin-top: 10px;
 }
 
-body .container .file-container .apply-button {
+body .container .first-button-container :first-child {
   margin-top: 15px;
   background-color: #69c592;
-  width: 130px;
+  width: 250px;
   height: 40px;
   text-align: center;
   line-height: 40px;
@@ -166,17 +135,33 @@ body .container .file-container .apply-button {
   margin: 1vh;
 }
 
-body .container .file-container .apply-button:hover {
+body .container .first-button-container :first-child:hover {
   background-color: #528b6c;
 }
 
-body .container .file-container input[type="file"] {
+body .container .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+body .container .button-container input[type="file"] {
   position: fixed;
   right: 100%;
   bottom: 100%;
 }
 
-body .container .file-container .custom-file-upload {
+body .container .button-container .custom-file-upload {
   margin-top: 15px;
   background-color: #69c592;
   width: 130px;
@@ -191,7 +176,7 @@ body .container .file-container .custom-file-upload {
   margin: 1vh;
 }
 
-body .container .file-container .custom-file-upload:hover {
+body .container .button-container .custom-file-upload:hover {
   background-color: #528b6c;
 }
-/*# sourceMappingURL=intibak.css.map */
+/*# sourceMappingURL=userDGS.css.map */

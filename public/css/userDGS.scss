@@ -65,46 +65,25 @@ body {
         padding: 30px;
         margin-top: 25px;
         margin-bottom: 250px;
-        .ygb-header {
+        .dgs-header {
             text-align: center;
             font-weight: bold;
             font-size: 24px;
             margin-bottom: 30px;
         }
-        .row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 25px;
-            #select {
-                height: 35px;
-                width: 16em;
-                padding: 0 0.5em;
-                border: 2px solid grey;
-            }
-            #select2 {
-                height: 35px;
-                width: 16em;
-                padding: 0 0.5em;
-                border: 2px solid grey;
-            }
-            input {
-                height: 35px;
-                width: 16em;
-                padding: 0 0.5em;
-                border: 2px solid grey;
-            }
+        .paragraph {
+            text-align: justify;
         }
-        .file-container {
+        .first-button-container {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            margin-top: 35px;
+            margin-top: 10px;
             :first-child {
                 margin-top: 15px;
                 background-color: rgb(105, 197, 146);
-                width: 130px;
+                width: 250px;
                 height: 40px;
                 text-align: center;
                 line-height: 40px;
@@ -117,6 +96,15 @@ body {
             :first-child:hover {
                 background-color: $hoverbg;
             }
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+          
             input[type="file"] {
                 position: fixed;
                 right: 100%;
