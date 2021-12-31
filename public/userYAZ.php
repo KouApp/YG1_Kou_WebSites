@@ -38,18 +38,18 @@ session_start();
         <div class="ygb-header">
             YAZ OKULU BAŞVURUSU
         </div>
-
+        <form action="GETyazokulu.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <p>Ad Soyad:</p>
-            <input type="text" placeholder="Ad Soyad">
+            <input type="text" name="adsoyad" placeholder="Ad Soyad">
         </div>
         <div class="row">
             <p>Öğrenim Türü:</p>
-            <input type="text" placeholder="Öğrenim Türü">
+            <input type="text" name="ogrenmtur" placeholder="Öğrenim Türü">
         </div>
         <div class="row">
             <p>Öğrenci No:</p>
-            <input type="text" placeholder="Öğrenci No">
+            <input type="text" name="ogrno" placeholder="Öğrenci No">
         </div>
         <div class="row">
             <p>Fakülte:</p>
@@ -75,38 +75,43 @@ session_start();
         </div>
         <div class="row">
             <p>Başkanlık:</p>
-            <input type="text" placeholder="Başkanlık">
+            <input type="text" name="baskanlik" placeholder="Başkanlık">
         </div>
         <div class="row">
             <p>Telefon:</p>
-            <input type="text" placeholder="Telefon">
+            <input type="text" name="tel" placeholder="Telefon">
         </div>
         <div class="row">
             <p>E-posta:</p>
-            <input type="text" placeholder="E-posta">
+            <input type="text" name="eposta" placeholder="E-posta">
         </div>
         <div class="row">
             <p>Adres:</p>
-            <input type="text" placeholder="Adres">
+            <input type="text" name="adres" placeholder="Adres">
         </div>
         <div class="row">
             <p>Gideceği Üniversite:</p>
-            <input type="text" placeholder="Gideceği Üniversite">
+            <input type="text" name="gcgıuni" placeholder="Gideceği Üniversite">
         </div>
         <div class="row">
             <p>Gideceği Fakülte:</p>
-            <input type="text" placeholder="Gideceği Fakülte">
+            <input type="text" name="gdcgfklte" placeholder="Gideceği Fakülte">
         </div>
+            <div class="file-container">
+                <input id="applyButton" type="submit" value="Belge indir">
 
-        <div class="file-container">
-            <input href="" id="applyButton" type="submit" value="Başvur">
+            </div>
+</form>
+        <form action="GETyazokulu2.php" method="post" enctype="multipart/form-data">
+            <div class="file-container">
+                <input id="applyButton" type="submit" value="Başvur">
 
-            <label for="fileButton" class="custom-file-upload">
-                Belge Gönder
-            </label>
-            <input id="fileButton" name="dosya" type="file" />
-        </div>
-
+                <label for="fileButton" class="custom-file-upload">
+                    Belge Gönder
+                </label>
+                <input id="fileButton" name="dosya" type="file" />
+            </div>
+        </form>
     </div>
 </body>
 
