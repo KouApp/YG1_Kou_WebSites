@@ -17,7 +17,7 @@ function image()
 }
 $res = image();
 if ($res == "error"):
-    echo "error";
+    header("Location: /kayitBasarisiz.php");
 else:
 
     $curl = curl_init();
@@ -53,9 +53,9 @@ else:
 
     unlink('dosyalar/'. $_FILES['dosya']['name']);
     if($response=="True"):
-        header("Location: /login.php");
+        header("Location: /kayitBasarili.php");
     else:
-        header("Location: /404.php");
+        header("Location: /kayitBasarisiz.php");
     endif;
 endif;
 ?>

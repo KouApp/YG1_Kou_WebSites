@@ -16,3 +16,18 @@ function filedownload($path){
     readfile($path);
     unlink($path);
 }
+function files()
+{
+    if(isset($_FILES["dosya"])) {
+        $tmp_name = $_FILES["dosya"]["tmp_name"];
+        $path = 'dosyalar/'. $_FILES['dosya']['name'];
+        if (move_uploaded_file($tmp_name, $path)) {
+            echo 'Dosya yüklendi.';
+            $b64Doc = base64_encode(file_get_contents($path));
+            return $b64Doc;
+        } else {
+            echo 'Dosya yüklemede hata.';
+        }
+        unlink($tmp_name);
+    }
+}

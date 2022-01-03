@@ -22,6 +22,9 @@ curl_close($curl);
 if ($response == "users"):
     $_SESSION['user']=$_POST['login'];
     header("Location: /GETuserinfo.php");
+elseif ($response == "admins"):
+    $_SESSION['user']=$_POST['login'];
+    header("Location: /admin.php");
 else:
     header("Location: /404.php");
 endif;
