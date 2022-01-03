@@ -38,14 +38,14 @@ session_start();
         <div class="ygb-header">
             İNTİBAK BAŞVURUSU
         </div>
-
+        <form action="GETintibak.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <p>Ad Soyad:</p>
-            <input type="text" placeholder="Ad Soyad">
+            <input type="text" name="adsoyad" placeholder="Ad Soyad">
         </div>
         <div class="row">
             <p>Öğrenci No:</p>
-            <input type="text" placeholder="Öğrenci No">
+            <input type="text" name="ogrno" placeholder="Öğrenci No">
         </div>
         <div class="row">
             <p>Fakülte:</p>
@@ -66,35 +66,35 @@ session_start();
                 <option value="2">Bölüm 2</option>
             </select>
         </div>
-        <div class="row">
-            <p>Kayıtlı Fakülte:</p>
-            <input type="text" placeholder="Kayıtlı Fakülte">
-        </div>
-        <div class="row">
-            <p>Geçiş Türü:</p>
-            <input type="text" placeholder="Kayıtlı Bölüm">
-        </div>
+
+            <div class="row">
+                <p>Geçiş yolu:</p>
+                <input type="text" name="gcsyol" placeholder="Yerleştiği Yıl">
+            </div>
         <div class="row">
             <p>Mevcut Yıl:</p>
-            <input type="text" placeholder="Yerleştiği Yıl">
+            <input type="text" name="yil" placeholder="Yerleştiği Yıl">
         </div>
         <div class="row">
             <p>Mevcut Yarıyıl:</p>
-            <input type="text" placeholder="Başvurulan Fakülte">
+            <input type="text" name="mevctyar" placeholder="Başvurulan Fakülte">
         </div>
         <div class="row">
             <p>İntibak Edilecek Yarıyıl:</p>
-            <input type="text" placeholder="Başvurulan Bölüm">
+            <input type="text" name="yarıyıl" placeholder="Başvurulan Bölüm">
         </div>
-        <div class="file-container">
+            <div class="file-container">
+                <input class="apply-button" type="submit" value="Dilekçe Oluştur" />
+            </div>
+        </form>
+        <form action="GETintibak2.php" method="post" enctype="multipart/form-data">
+            <div class="file-container">
+                <label for="dilekceButton" class="custom-file-upload">Dilekçe Yolla
+                </label>
+                <input id="dilekceButton" type="file" value="Dilekçe Yolla">
 
-            <label for="dilekceButton" class="custom-file-upload">
-                Dilekçe Oluştur
-            </label>
-            <input id="dilekceButton" name="dosya" type="file" />
-
-            <input href="" class="apply-button" type="submit" value="Dilekçe Yolla">
-        </div>
+            </div>
+        </form>
     </div>
 </body>
 

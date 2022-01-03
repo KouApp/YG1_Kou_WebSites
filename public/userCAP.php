@@ -49,11 +49,11 @@ session_start();
                 <p>Fakülte:</p>
                 <select name="select" id="select">
                     <option selected disabled>Seçim Yapınız</option>
-                    <option value="Eğitim Fakültesi">Eğitim Fakültesi</option>
-                    <option value="Fen Edebiyat Fakültesi">Fen Edebiyat Fakültesi</option>
-                    <option value="İktisadi ve İdari Bilimler Fakültesi">İktisadi ve İdari Bilimler Fakültesi</option>
-                    <option value="İletişim Fakültesi">İletişim Fakültesi</option>
-                    <option value="Mühendislik Fakültesi">Mühendislik Fakültesi</option>
+                    <option value="egitim">Eğitim Fakültesi</option>
+                    <option value="fen">Fen Edebiyat Fakültesi</option>
+                    <option value="iktisadi">İktisadi ve İdari Bilimler Fakültesi</option>
+                    <option value="iletisim">İletişim Fakültesi</option>
+                    <option value="müh">Mühendislik Fakültesi</option>
                 </select>
             </div>
 
@@ -110,42 +110,7 @@ session_start();
                 </select>
             </div>
 
-            <script type="text/javascript">
-                function uni(sel) {
-                    addOpt(sel.options[sel.selectedIndex].text);
-                }
 
-                function addOpt(deg) {
-                    let tekno = ["burası", "teknoloji", "fakultesi"];
-                    let fen = ["burası", "fen", "fakultesi"];
-                    let hukuk = ["burası", "hukuk", "fakultesi"];
-                    removeOptions(document.getElementById('select3'));
-                    if (deg == "Teknoloji Fakültesi") {
-                        for (var i = 0; i < tekno.length; i++) {
-                            var opt = document.createElement("option");
-                            document.getElementById("select3").options.add(opt);
-                            opt.text = tekno[i];
-                            opt.value = tekno[i];
-                        }
-                    }
-                    if (deg == "Fen-Edebiyat Fakültesi") {
-                        for (var i = 0; i < fen.length; i++) {
-                            var opt = document.createElement("option");
-                            document.getElementById("select3").options.add(opt);
-                            opt.text = fen[i];
-                            opt.value = fen[i];
-                        }
-                    }
-
-                }
-
-                function removeOptions(selectElement) {
-                    var i, L = selectElement.options.length - 1;
-                    for (i = L; i >= 0; i--) {
-                        selectElement.remove(i);
-                    }
-                }
-            </script>
             <div class="file-container">
                 <input href="" id="fileButton" type="submit" value="Belge indir">
             </div>
