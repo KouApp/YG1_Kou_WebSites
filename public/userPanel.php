@@ -12,9 +12,13 @@ session_start();
     <title>Kullanıcı Paneli</title>
     <link rel="stylesheet" href="css/userPanel.css">
     <link rel="stylesheet" href="css/yasin.css">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
+    <div id="navigation">
+        <script src = "menu.js"></script>
+    </div>
 
     <?php
     if (strlen($_SESSION['user']) == 0) {
