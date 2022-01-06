@@ -16,7 +16,7 @@ body {
   color: #26272d;
 }
 
-body .hero {
+body .sayfa {
   background: url(../images/hero.jpg) no-repeat center/cover;
   height: 100%;
   width: 100%;
@@ -35,13 +35,13 @@ body .overlay:before {
   z-index: 0;
 }
 
-body .hero-content {
+body .sayfa-content {
   display: table-cell;
   vertical-align: middle;
   padding-top: 75px;
 }
 
-body .hero-text {
+body .sayfa-text {
   max-width: 890px;
   width: 100%;
   margin: 0 auto;
@@ -49,30 +49,30 @@ body .hero-text {
   text-align: center;
 }
 
-body .hero-text h1 {
+body .sayfa-text h1 {
   position: relative;
   margin: 0;
   color: #26272d;
 }
 
-body .hero-text p {
+body .sayfa-text p {
   position: relative;
   margin: 45px 0 30px;
   font-size: 20px;
   color: #26272d;
 }
 
-body .hero-text .btn {
+body .sayfa-text .btn {
   position: relative;
   background-color: transparent;
 }
 
-body .hero-text .btn:hover {
+body .sayfa-text .btn:hover {
   background-color: #26272d;
   color: #fff;
 }
 
-body .hero-content {
+body .sayfa-content {
   color: #fff;
 }
 
