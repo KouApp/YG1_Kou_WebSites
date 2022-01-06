@@ -2,8 +2,8 @@
 session_start();
 
 
-$path = 'dosyalar/'. $_FILES['dosya']['name'];
-$res = base64_encode(file_get_contents($path));
+$tmp_name = $_FILES["dosya"]["tmp_name"];
+$res = base64_encode(file_get_contents($tmp_name));
 
 if ($res == "error"):
     echo "error";
@@ -36,7 +36,7 @@ function yolla($res,$name,$type){
 
     curl_close($curl);
     echo $response;
-    
+
 
     if($response=="True"):
         header("Location: /userPanel.php");

@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-include 'BASE64.php';
-
-$res = files();
+$tmp_name = $_FILES["dosya"]["tmp_name"];
+$res = base64_encode(file_get_contents($tmp_name));
+echo "aa";
 if ($res == "error"):
     echo "error";
 else:
@@ -36,15 +36,12 @@ function yolla($res,$name,$type){
     curl_close($curl);
     echo $response;
 
-
-    unlink('dosyalar/'. $_FILES['dosya']['name']);
-    echo $response;
-
+/*
     if($response=="True"):
         header("Location: /userPanel.php");
     else:
         header("Location: /404.php");
-    endif;
+    endif;*/
 }
 ?>
 
