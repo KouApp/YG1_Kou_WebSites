@@ -11,7 +11,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kullanıcı Paneli</title>
     <link rel="stylesheet" href="css/userPanel.css">
-    <link rel="stylesheet" href="css/yasin.css">
     <link rel="stylesheet" href="css/menu.css">
 </head>
 

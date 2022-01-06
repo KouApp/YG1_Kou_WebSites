@@ -10,9 +10,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İntibak Başvurusu</title>
     <link rel="stylesheet" href="css/intibak.css">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
+    <div id="navigation">
+        <script src = "menu.js"></script>
+    </div>
     <?php
     if (strlen($_SESSION['user']) == 0) {
         header("Location: http://127.0.0.1:8000/login.php");

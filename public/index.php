@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="css/anaSayfa.css">
 </head>
 <body>
-<div id="hero" class="hero overlay">
-        <div class="hero-content">
-            <div class="hero-text">
+<div id="container" class="container overlay">
+        <div class="container-content">
+            <div class="container-text">
                 <h1>Başvuru Sistemine Hoş Geldiniz</h1>
                 <p>Sisteme giriş yaparak başvuru işlemlerinizi başlatabilirsiniz.</p>
                 <a href="login.php" class="btn btn-border">Giriş Yap</a>

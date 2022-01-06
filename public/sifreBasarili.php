@@ -13,9 +13,13 @@ header("Refresh: 5; url=login.php");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/basarili.css">
-
+    <link rel="stylesheet" href="css/menu.css">
 </head>
+
 <body>
+    <div id="navigation">
+        <script src = "menu.js"></script>
+    </div>
     <div class="container">
         <div class="content">
             <h2>BAŞARILI</h2>
