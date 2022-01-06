@@ -19,7 +19,11 @@ body{
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     color: $color1;
+<<<<<<< HEAD
     .sayfa { 
+=======
+    .container { 
+>>>>>>> main
         background: url(../images/hero.jpg) no-repeat center / cover; 
         height: 100%;
         width: 100%;
@@ -36,41 +40,69 @@ body{
         left: 0;
         z-index: 0;
       }
+<<<<<<< HEAD
       .sayfa-content {
+=======
+      .container-content {
+>>>>>>> main
         display: table-cell;
         vertical-align: middle;
         padding-top: 75px;
         }
+<<<<<<< HEAD
         .sayfa-text {
+=======
+        .container-text {
+>>>>>>> main
             max-width: 890px;
             width: 100%;
             margin: 0 auto;
             padding: 0 15px;
             text-align: center;
         }
+<<<<<<< HEAD
         .sayfa-text h1 {
+=======
+        .container-text h1 {
+>>>>>>> main
             position: relative;
             margin: 0;
             color:$color1;
         }
         
+<<<<<<< HEAD
         .sayfa-text p {
+=======
+        .container-text p {
+>>>>>>> main
             position: relative;
             margin: 45px 0 30px;
             font-size: 20px;
             color: $color1;
         }
         
+<<<<<<< HEAD
         .sayfa-text .btn {
+=======
+        .container-text .btn {
+>>>>>>> main
             position: relative;
             background-color: transparent;
         }
         
+<<<<<<< HEAD
         .sayfa-text .btn:hover {
             background-color:$color1;
             color: $color3;
         }
         .sayfa-content {
+=======
+        .container-text .btn:hover {
+            background-color:$color1;
+            color: $color3;
+        }
+        .container-content {
+>>>>>>> main
             color: $color3;
         }
             a {
