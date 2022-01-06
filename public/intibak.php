@@ -93,10 +93,13 @@ session_start();
         </form>
         <form action="GETintibak2.php" method="post" enctype="multipart/form-data">
             <div class="file-container">
-                <label for="dilekceButton" class="custom-file-upload">Dilekçe Yolla
+                <label for="dilekceButton" class="custom-file-upload">Dilekçe Yükle
                 </label>
-                <input id="dilekceButton" type="file" value="Dilekçe Yolla">
+                <input id="dilekceButton" name="dosya" type="file" value="Dilekçe Yolla">
 
+            </div>
+            <div class="file-container">
+                <input class="apply-button" type="submit" value="Dilekçe Gönder" />
             </div>
         </form>
     </div>
