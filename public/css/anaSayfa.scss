@@ -19,7 +19,7 @@ body{
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     color: $color1;
-    .hero { 
+    .container { 
         background: url(../images/hero.jpg) no-repeat center / cover; 
         height: 100%;
         width: 100%;
@@ -36,41 +36,41 @@ body{
         left: 0;
         z-index: 0;
       }
-      .hero-content {
+      .container-content {
         display: table-cell;
         vertical-align: middle;
         padding-top: 75px;
         }
-        .hero-text {
+        .container-text {
             max-width: 890px;
             width: 100%;
             margin: 0 auto;
             padding: 0 15px;
             text-align: center;
         }
-        .hero-text h1 {
+        .container-text h1 {
             position: relative;
             margin: 0;
             color:$color1;
         }
         
-        .hero-text p {
+        .container-text p {
             position: relative;
             margin: 45px 0 30px;
             font-size: 20px;
             color: $color1;
         }
         
-        .hero-text .btn {
+        .container-text .btn {
             position: relative;
             background-color: transparent;
         }
         
-        .hero-text .btn:hover {
+        .container-text .btn:hover {
             background-color:$color1;
             color: $color3;
         }
-        .hero-content {
+        .container-content {
             color: $color3;
         }
             a {
