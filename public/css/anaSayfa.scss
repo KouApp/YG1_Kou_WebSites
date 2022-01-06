@@ -19,7 +19,7 @@ body{
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     color: $color1;
-    .hero { 
+    .sayfa { 
         background: url(../images/hero.jpg) no-repeat center / cover; 
         height: 100%;
         width: 100%;
@@ -36,41 +36,41 @@ body{
         left: 0;
         z-index: 0;
       }
-      .hero-content {
+      .sayfa-content {
         display: table-cell;
         vertical-align: middle;
         padding-top: 75px;
         }
-        .hero-text {
+        .sayfa-text {
             max-width: 890px;
             width: 100%;
             margin: 0 auto;
             padding: 0 15px;
             text-align: center;
         }
-        .hero-text h1 {
+        .sayfa-text h1 {
             position: relative;
             margin: 0;
             color:$color1;
         }
         
-        .hero-text p {
+        .sayfa-text p {
             position: relative;
             margin: 45px 0 30px;
             font-size: 20px;
             color: $color1;
         }
         
-        .hero-text .btn {
+        .sayfa-text .btn {
             position: relative;
             background-color: transparent;
         }
         
-        .hero-text .btn:hover {
+        .sayfa-text .btn:hover {
             background-color:$color1;
             color: $color3;
         }
-        .hero-content {
+        .sayfa-content {
             color: $color3;
         }
             a {

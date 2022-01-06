@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Başvuru Seçim</title>
     <link rel="stylesheet" href="css/appSelect.css">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
+    <div id="navigation">
+        <script src = "menu.js"></script>
+    </div>
     <div class="container">
         <div class="appselect-header">
             BAŞVURU TÜRÜ

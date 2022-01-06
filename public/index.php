@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="css/anaSayfa.css">
 </head>
 <body>
-<div id="hero" class="hero overlay">
-        <div class="hero-content">
-            <div class="hero-text">
+<div id="sayfa" class="sayfa overlay">
+        <div class="sayfa-content">
+            <div class="sayfa-text">
                 <h1>Başvuru Sistemine Hoş Geldiniz</h1>
                 <p>Sisteme giriş yaparak başvuru işlemlerinizi başlatabilirsiniz.</p>
                 <a href="login.php" class="btn btn-border">Giriş Yap</a>
