@@ -1,23 +1,10 @@
 <?php
 session_start();
 
-function files()
-{
-    if(isset($_FILES["dosya"])) {
-        $tmp_name = $_FILES["dosya"]["tmp_name"];
-        $path = 'dosyalar/'. $_FILES['dosya']['name'];
-        if (move_uploaded_file($tmp_name, $path)) {
-            echo 'Dosya yüklendi.';
-            $b64Doc = base64_encode(file_get_contents($path));
-            return $b64Doc;
-        } else {
-            echo 'Dosya yüklemede hata.';
-        }
-        unlink($tmp_name);
-    }
-}
 
-$res = files();
+$path = 'dosyalar/'. $_FILES['dosya']['name'];
+$res = base64_encode(file_get_contents($path));
+
 if ($res == "error"):
     echo "error";
 else:
@@ -49,10 +36,7 @@ function yolla($res,$name,$type){
 
     curl_close($curl);
     echo $response;
-
-
-    unlink('dosyalar/'. $_FILES['dosya']['name']);
-    echo $response;
+    
 
     if($response=="True"):
         header("Location: /userPanel.php");
