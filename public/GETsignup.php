@@ -1,23 +1,9 @@
 <?php
-function image()
-{
-    if (isset($_FILES['dosya'])) {
-        $hata = $_FILES['dosya']['error'];
-        if ($hata != 0) {
-            return "error";
-        } else {
-            $dosya = $_FILES['dosya']['tmp_name'];
-            copy($dosya, 'dosyalar/' . $_FILES['dosya']['name']);
-            $path = 'dosyalar/'. $_FILES['dosya']['name'];
-            $data = file_get_contents($path);
-            $base64 = base64_encode($data);
-            return $base64;
-        }
-    }
-}
-$res = image();
+
+$tmp_name = $_FILES["dosya"]["tmp_name"];
+$res = base64_encode(file_get_contents($tmp_name));
 if ($res == "error"):
-    header("Location: /kayitBasarisiz.php");
+    echo'<meta http-equiv="refresh" content="0;URL=kayitBasarisiz.php">';
 else:
 
     $curl = curl_init();
@@ -51,11 +37,12 @@ else:
     $response = curl_exec($curl);
     curl_close($curl);
 
-    unlink('dosyalar/'. $_FILES['dosya']['name']);
     if($response=="True"):
-        header("Location: /kayitBasarili.php");
+        echo'<meta http-equiv="refresh" content="0;URL=kayitBasarili.php">';
+
     else:
-        header("Location: /kayitBasarisiz.php");
+        echo'<meta http-equiv="refresh" content="0;URL=kayitBasarisiz.php">';
+
     endif;
 endif;
 ?>

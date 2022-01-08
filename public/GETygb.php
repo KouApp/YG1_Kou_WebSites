@@ -54,11 +54,11 @@ function gonder(){
 $res = gonder();
 $manage = json_decode($res,true);
 include 'BASE64.php';
-
+$filename = $_POST['ogrno'];
 if($res =="Kayitli"):
     echo "kayit var";
 else:
-    $name = base64topdf($manage['base64'],"sahin");
+    $name = base64topdf($manage['base64'],$filename);
     filedownload($name);
 endif;
 ?>

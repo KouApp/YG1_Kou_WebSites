@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+
+$users = json_decode($_SESSION['temp']);
+$tcno = "TC no";
+$dosyaadi = "Dosya ismi";
+
 ?>
 <?php $session_value = (isset($_SESSION['user_name'])) ? $_SESSION['user_name'] : ''; ?>
 <!DOCTYPE html>
@@ -23,9 +29,7 @@ session_start();
     ?>
 
     <div class="user-info-container">
-        <div class="user-info-img">
-            <img src="data:image/png;base64,<?php echo $_SESSION['user_profilebase64']; ?>" alt="Red dot" />
-        </div>
+
         <div class="user-info-text">
             <p id="studentName">
             <h1><?php echo $_SESSION['user_name']; ?> <?php echo $_SESSION['user_surname']; ?></h1>
@@ -41,7 +45,39 @@ session_start();
         <div class="user-header">
             ADMİN SAYFASI
         </div>
+        <form action="GETadmin2.php" method="post" enctype="multipart/form-data">
+        <a>Başvuru türü : </a>
+        <select name="select2" id="select2">
+            <option selected disabled>Seçim Yapınız</option>
+            <option value="cap">cap</option>
+            <option value="intibak">İntibak</option>
 
+        </select>
+            <input type="submit" value="SECİN">
+        </form>
+        <form action="GETadmin.php" method="post" enctype="multipart/form-data">
+
+                <a>TC No:</a>
+                <input type="text" name="tc" placeholder="Öğrenci No"><br>
+
+            <input type="submit" value="ONAYLA">
+        </form>
+        <table>
+            <tbody>
+            <tr>
+                <th>TC no</th>
+                <th>Durum</th>
+                <th>Dosya adi</th>
+            </tr>
+            <?php foreach ($users as $user) { ?>
+                <tr>
+                    <td> <?= $user->$tcno; ?> </td>
+                    <td> <?= $user->Kontrol; ?> </td>
+                    <td> <?= $user->$dosyaadi; ?> </td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
     </div>
 </body>
 
