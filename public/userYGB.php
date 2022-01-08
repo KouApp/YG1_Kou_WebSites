@@ -160,11 +160,11 @@ session_start();
 
         <form action="GETygb2.php" method="post" enctype="multipart/form-data">
             <p class="file-header">GEREKEN DOSYALAR</p>
-            <a>Transkript : </a><input type="file" name="trans" class="file-button" value="Trans"><br>
-            <a>Disiplin Belgesi : </a><input type="file" name="disiplin" class="file-button"><br>
-            <a>Sınav sonuç belgesi : </a><input type="file" name="sinav" class="file-button"><br>
-            <a>Dekont : </a><input type="file" name="dekont" class="file-button"><br>
-            <a>Başvuru belgesi : </a><input type="file" name="basvur" class="file-button"><br>
+            <div class="row"> <a>Transkript : </a><input type="file" name="trans" class="file-button" value="Trans"><br></div>
+            <div class="row"><a>Disiplin Belgesi : </a><input type="file" name="disiplin" class="file-button"><br></div>
+                <div class="row"><a>Sınav sonuç belgesi : </a><input type="file" name="sinav" class="file-button"><br></div>
+                    <div class="row"><a>Dekont : </a><input type="file" name="dekont" class="file-button"><br></div>
+                        <div class="row"><a>Başvuru belgesi : </a><input type="file" name="basvur" class="file-button"><br></div>
 
             <input type="submit" class="apply-button" value="gonder"></input>
 

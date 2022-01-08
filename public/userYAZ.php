@@ -107,13 +107,19 @@ session_start();
             </div>
 </form>
         <form action="GETyazokulu2.php" method="post" enctype="multipart/form-data">
+            <div class="row">
             <div class="file-container">
-                <input id="applyButton" type="submit" value="Başvur">
 
                 <label for="fileButton" class="custom-file-upload">
                     Belge Gönder
                 </label>
                 <input id="fileButton" name="dosya" type="file" />
+
+            </div>
+            <div class="file-container">
+                <input id="applyButton" type="submit" value="BAŞVUR">
+
+            </div>
             </div>
         </form>
     </div>

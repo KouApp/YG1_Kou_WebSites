@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Refresh: 5; url=appSelect.php");
+header("Refresh: 5; url=login.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@ header("Refresh: 5; url=appSelect.php");
             <h2>Giriş BAŞARILI</h2>
             <h4>Şifre sıfırlama işlemi yaptıysan</h4>
             <p>Yeni şifren TC kimlik numaran olarak ayarlandı.</p>
-            <a href="appSelect.php">Başvuru sayfasına gidiniz.</a>
+            <a href="login.php">Başvuru sayfasına gidiniz.</a>
         </div>
     </div>
 </body>

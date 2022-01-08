@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Refresh: 3; url=appSelect.php");
+header("Refresh: 3; url=login.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@ header("Refresh: 3; url=appSelect.php");
             <h2>BAŞARILI</h2>
             <h4>Kayıt işlemin başarıyla tamamlandı :)</h4>
             <p>3 saniye içerisinde otomatik olarak giriş yapma ekranına yönlendirileceksin.</p>
-            <a href="appSelect.php">Başvuru ekranına dön</a>
+            <a href="login.php">Başvuru ekranına dön</a>
         </div>
     </div>
 </body>
