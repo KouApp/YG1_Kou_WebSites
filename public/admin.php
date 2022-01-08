@@ -17,7 +17,7 @@ $dosyaadi = "Dosya ismi";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kullanıcı Paneli</title>
     <link rel="stylesheet" href="css/userPanel.css">
-    <link rel="stylesheet" href="css/yasin.css">
+    <link rel="stylesheet" href="css/tableAdmin.css">
 </head>
 
 <body>
@@ -62,15 +62,15 @@ $dosyaadi = "Dosya ismi";
 
             <input type="submit" value="ONAYLA">
         </form>
-        <table>
+        <table class="content-table">
             <tbody>
-            <tr>
+            <tr id="ust-bilgi">
                 <th>TC no</th>
                 <th>Durum</th>
                 <th>Dosya adi</th>
             </tr>
             <?php foreach ($users as $user) { ?>
-                <tr>
+                <tr id="alt-bilgi">
                     <td> <?= $user->$tcno; ?> </td>
                     <td> <?= $user->Kontrol; ?> </td>
                     <td> <?= $user->$dosyaadi; ?> </td>
