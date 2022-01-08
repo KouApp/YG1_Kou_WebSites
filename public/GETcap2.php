@@ -53,14 +53,14 @@ function yolla($res,$name,$type){
 
     unlink('dosyalar/'. $_FILES['dosya']['name']);
     echo $response;
-
+/*
     if($response=="True"):
         echo'<meta http-equiv="refresh" content="0;URL=login.php">';
         //header("Location: /login.php");
     else:
         echo'<meta http-equiv="refresh" content="0;URL=404.php">';
         //header("Location: /404.php");
-    endif;
+    endif;*/
 }
 ?>
 
