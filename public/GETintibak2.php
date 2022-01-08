@@ -34,14 +34,12 @@ function yolla($res,$name,$type){
     $response = curl_exec($curl);
 
     curl_close($curl);
-    echo $response;
 
-/*
     if($response=="True"):
-        header("Location: /userPanel.php");
+        echo'<meta http-equiv="refresh" content="0;URL=kayitBasarili.php">';
     else:
-        header("Location: /404.php");
-    endif;*/
+        echo'<meta http-equiv="refresh" content="0;URL=kayitBasarisiz.php">';
+    endif;
 }
 ?>
 

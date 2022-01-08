@@ -1,21 +1,16 @@
 <?php
 session_start();
-function files($pur)
-{
-    if(isset($_FILES[$pur])) {
-        $tmp_name = $_FILES[$pur]["tmp_name"];
-        $path = 'dosyalar/'. $_FILES[$pur]['name'];
-        if (move_uploaded_file($tmp_name, $path)) {
-            echo 'Dosya yüklendi.';
-            $b64Doc = base64_encode(file_get_contents($path));
-            return $b64Doc;
-        } else {
-            echo 'Dosya yüklemede hata.';
-        }
-        unlink($tmp_name);
-    }
-}
 
+$tmp_name_trans = $_FILES["trans"]["tmp_name"];
+$res_trans = base64_encode(file_get_contents($tmp_name_trans));
+$tmp_name_disiplin = $_FILES["disiplin"]["tmp_name"];
+$res_disiplin = base64_encode(file_get_contents($tmp_name_disiplin));
+$tmp_name_sinav = $_FILES["sinav"]["tmp_name"];
+$res_sinav = base64_encode(file_get_contents($tmp_name_sinav));
+$tmp_name_dekont = $_FILES["dekont"]["tmp_name"];
+$res_dekont = base64_encode(file_get_contents($tmp_name_dekont));
+$tmp_name_basvur = $_FILES["basvur"]["tmp_name"];
+$res_basvur = base64_encode(file_get_contents($tmp_name_basvur));
 
 function filesave($pur,$res,$trans){
 
@@ -38,21 +33,17 @@ function filesave($pur,$res,$trans){
     ));
     $response = curl_exec($curl);
     curl_close($curl);
-    unlink('dosyalar/'. $_FILES[$pur]['name']);
-    echo $response;
+
+
 }
 $trans = "trans";
-$res = files("trans");
-filesave($trans,$res,$trans);
+filesave($trans,$res_trans,$trans);
 $dsip = "disiplin";
-$res2 = files("disiplin");
-filesave($dsip,$res2,$dsip);
+filesave($dsip,$res_disiplin,$dsip);
 $sinav = "sinav";
-$res3 = files("sinav");
-filesave($sinav,$res3,$sinav);
+filesave($sinav,$res_sinav,$sinav);
 $dekont = "dekont";
-$res4 = files("dekont");
-filesave($dekont,$res4,$dekont);
+filesave($dekont,$res_dekont,$dekont);
 $basvur = "basvur";
-$res5 = files("basvur");
-filesave($basvur,$res5,$basvur);
+filesave($basvur,$res_basvur,$basvur);
+echo'<meta http-equiv="refresh" content="0;URL=kayitBasarili.php">';

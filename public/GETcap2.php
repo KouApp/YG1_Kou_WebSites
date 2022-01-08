@@ -1,23 +1,8 @@
 <?php
 session_start();
 
-function files()
-{
-    if(isset($_FILES["dosya"])) {
-        $tmp_name = $_FILES["dosya"]["tmp_name"];
-        $path = 'dosyalar/'. $_FILES['dosya']['name'];
-        if (move_uploaded_file($tmp_name, $path)) {
-            echo 'Dosya yüklendi.';
-            $b64Doc = base64_encode(file_get_contents($path));
-            return $b64Doc;
-        } else {
-            echo 'Dosya yüklemede hata.';
-        }
-        unlink($tmp_name);
-    }
-}
-
-$res = files();
+$tmp_name = $_FILES["dosya"]["tmp_name"];
+$res = base64_encode(file_get_contents($tmp_name));
 if ($res == "error"):
     echo "error";
 else:
@@ -48,19 +33,15 @@ function yolla($res,$name,$type){
     $response = curl_exec($curl);
 
     curl_close($curl);
-    echo $response;
 
 
-    unlink('dosyalar/'. $_FILES['dosya']['name']);
-    echo $response;
-/*
     if($response=="True"):
-        echo'<meta http-equiv="refresh" content="0;URL=login.php">';
+        echo'<meta http-equiv="refresh" content="0;URL=kayitBasarili.php">';
         //header("Location: /login.php");
     else:
-        echo'<meta http-equiv="refresh" content="0;URL=404.php">';
+        echo'<meta http-equiv="refresh" content="0;URL=KayitBasarisiz.php">';
         //header("Location: /404.php");
-    endif;*/
+    endif;
 }
 ?>
 
