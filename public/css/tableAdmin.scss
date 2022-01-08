@@ -1,0 +1,32 @@
+$color1: #009878;
+$color2: #fff;
+$color3: #ddd;
+$color4: #f3f3f3;
+$color5: rgba(0,0,0,0.15);
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 340px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px $color5;
+    tbody tr[id="ust-bilgi"]{
+        background-color: $color1;
+        color: $color2;
+        text-align: left;
+        font-weight: bold;
+        th{
+            padding: 12px 15px;
+        }
+    tr [id="alt-bilgi"]{
+        border-bottom: 1px solid $color3;
+    }
+    tr [id="alt-bilgi"]:nth-of-type(even){
+        background-color: $color4;
+    }
+    tr [id="alt-bilgi"]:last-of-type {
+        border-bottom: 2px solid $color1;
+    }       
+    }
+}
