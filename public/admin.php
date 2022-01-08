@@ -18,6 +18,7 @@ $dosyaadi = "Dosya ismi";
     <title>Kullanıcı Paneli</title>
     <link rel="stylesheet" href="css/userPanel.css">
     <link rel="stylesheet" href="css/tableAdmin.css">
+    <link rel="stylesheet" href="css/adminPanel.css">
 </head>
 
 <body>
@@ -46,21 +47,31 @@ $dosyaadi = "Dosya ismi";
             ADMİN SAYFASI
         </div>
         <form action="GETadmin2.php" method="post" enctype="multipart/form-data">
-        <a>Başvuru türü : </a>
-        <select name="select2" id="select2">
-            <option selected disabled>Seçim Yapınız</option>
-            <option value="cap">cap</option>
-            <option value="intibak">İntibak</option>
+       <div class="firstcont">
+                <a>Başvuru türü : </a>
+                <select name="select2" id="select2">
+                    <option selected disabled>Seçim Yapınız</option>
+                    <option value="cap">cap</option>
+                    <option value="intibak">İntibak</option>
 
-        </select>
-            <input type="submit" value="SECİN">
+                </select>
+                <div class="button1">
+                    <input type="submit" value="SECİN" id="secid" name="secla">
+                </div>
+
+            </div>
         </form>
         <form action="GETadmin.php" method="post" enctype="multipart/form-data">
 
-                <a>TC No:</a>
-                <input type="text" name="tc" placeholder="Öğrenci No"><br>
+             <div class="secondcont">
+                <a id="firstid">TC No:</a>
+                <input type="text" name="tc" id="inputid" placeholder="Öğrenci No"><br>
 
-            <input type="submit" value="ONAYLA">
+                <div class="button2">
+                    <input type="submit" value="ONAYLA">
+                </div>
+
+            </div>
         </form>
         <table class="content-table">
             <tbody>
