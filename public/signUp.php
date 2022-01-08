@@ -64,11 +64,11 @@
                 <p>Fakülte:</p>
                 <select name="select2" id="select2" onChange="uni(this);">
                     <option selected disabled>Seçim Yapınız</option>
-                    <option value="Teknoloji Fakültesi">Teknoloji Fakültesi</option>
-                    <option value="Fen-Edebiyat Fakültesi">Fen-Edebiyat Fakültesi</option>
-                    <option value="Hukuk Fakültesi">Hukuk Fakültesi</option>
-                    <option value="Mühendislik Fakültesi">Mühendislik Fakültesi</option>
-                    <option value="Sosyal Bilimler Fakültesi">Sosyal Bilimler Fakültesi</option>
+                    <option value="tekno">Teknoloji Fakültesi</option>
+                    <option value="fen">Fen-Edebiyat Fakültesi</option>
+                    <option value="hukuk">Hukuk Fakültesi</option>
+                    <option value="muh">Mühendislik Fakültesi</option>
+                    <option value="sosyal">Sosyal Bilimler Fakültesi</option>
                 </select>
             </div>
             <script type="text/javascript">
@@ -77,11 +77,11 @@
                 }
 
                 function addOpt(deg) {
-                    let tekno = ["burası", "teknoloji", "fakultesi"];
+                    let tekno = ["Bilişim Sistemleri Müh", "Biyomedikal Müh", "Otomativ Müh" , ];
                     let fen = ["burası", "fen", "fakultesi"];
                     let hukuk = ["burası", "hukuk", "fakultesi"];
                     removeOptions(document.getElementById('select3'));
-                    if (deg == "Teknoloji Fakültesi") {
+                    if (deg == "tekno") {
                         for (var i = 0; i < tekno.length; i++) {
                             var opt = document.createElement("option");
                             document.getElementById("select3").options.add(opt);
@@ -89,7 +89,7 @@
                             opt.value = tekno[i];
                         }
                     }
-                    if (deg == "Fen-Edebiyat Fakültesi") {
+                    if (deg == "fen") {
                         for (var i = 0; i < fen.length; i++) {
                             var opt = document.createElement("option");
                             document.getElementById("select3").options.add(opt);
