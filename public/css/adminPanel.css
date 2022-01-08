@@ -1,1 +1,87 @@
-/* No CSS *//*# sourceMappingURL=adminPanel.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body .container .firstcont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .firstcont .button1 :first-child {
+  background-color: #69c592;
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+body .container .firstcont .button1 :first-child:hover {
+  background-color: #528b6c;
+}
+
+body .container .secondcont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+body .container .secondcont #firstid {
+  width: 100px;
+}
+
+body .container .secondcont #inputid {
+  padding-left: 5px;
+  height: 30px;
+  border: 2px solid grey;
+  width: 100px;
+}
+
+body .container .secondcont .button2 :first-child {
+  background-color: #69c592;
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+body .container .secondcont .button2 :first-child:hover {
+  background-color: #528b6c;
+}
