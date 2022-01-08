@@ -19,7 +19,7 @@
             BAŞVURU TÜRÜ
         </div>
         <div class="appselect-content">
-            <input id="dgsButton" type="submit" value="Dikey Geçiş" onclick="location.href='1.html';">
+            <input id="dgsButton" type="submit" value="Dikey Geçiş" onclick="location.href='userDGS.php';">
             <input id="ygbButton" type="submit" value="Yatay Geçiş" onclick="location.href='userYGB.php';">
             <input id="yazButton" type="submit" value="Yaz Okulu" onclick="location.href='userYAZ.php';">
             <input id="capButton" type="submit" value="Çift Anadal" onclick="location.href='userCAP.php';">

@@ -31,10 +31,9 @@ $response = curl_exec($curl);
 curl_close($curl);
 $manage = json_decode($response,true);
 include 'BASE64.php';
-$filename = $_POST['ogrno'];
 if($response =="Kayitli"):
     echo "kayit var";
 else:
-    $name = base64topdf($manage['base64'],$filename);
+    $name = base64topdf($manage['base64'],"sahin");
     filedownload($name);
     endif;
