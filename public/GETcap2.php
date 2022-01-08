@@ -55,9 +55,11 @@ function yolla($res,$name,$type){
     echo $response;
 
     if($response=="True"):
-        header("Location: /login.php");
+        echo'<meta http-equiv="refresh" content="0;URL=login.php">';
+        //header("Location: /login.php");
     else:
-        header("Location: /404.php");
+        echo'<meta http-equiv="refresh" content="0;URL=404.php">';
+        //header("Location: /404.php");
     endif;
 }
 ?>
