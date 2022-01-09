@@ -57,26 +57,85 @@ session_start();
             </div>
             <div class="row">
                 <p>Fakülte:</p>
-                <select name="select" id="select">
+                <select name="select2" id="select2" onChange="uni(this);">
                     <option selected disabled>Seçim Yapınız</option>
-                    <option value="1">Eğitim Fakültesi</option>
-                    <option value="2">Fen Edebiyat Fakültesi</option>
-                    <option value="3">İktisadi ve İdari Bilimler Fakültesi</option>
-                    <option value="4">İletişim Fakültesi</option>
-                    <option value="5">Mühendislik Fakültesi</option>
+                    <option value="egitim">Eğitim Fakültesi</option>
+                    <option value="fen">Fen-Edebiyat Fakültesi</option>
+                    <option value="iktisat">İktisadi ve İdari Bilimler Fakültesi</option>
+                    <option value="muh">Mühendislik Fakültesi</option>
+                    <option value="iletisim">İletişim Fakültesi</option>
                 </select>
             </div>
             <div class="row">
                 <p>Bölüm:</p>
-                <select name="select2" id="select2">
+                <select name="select" id="select">
                     <option selected disabled>Seçim Yapınız</option>
-                    <option value="1">Yasin</option>
-                    <option value="2">Buraya</option>
-                    <option value="3">Da</option>
-                    <option value="4">Yardım</option>
-                    <option value="5">Lazım</option>
+
                 </select>
             </div>
+            <script type="text/javascript">
+
+                function uni(sel) {
+                    addOpt(sel.options[sel.selectedIndex].value);
+                }
+
+                function addOpt(deg) {
+                    let egitim = ["Fen bilgisi öğretmenliği", "İngilizce öğretmenliği", "Okul öncesi öğretmenliği","Rehberlik ve psikolojik danışmanlık","Sınıf öğretmenliği"];
+                    let fen = ["Matematik", "Fizik", "Kimya","Tarih","Arkeoloji"];
+                    let iletisim = ["Gazetecilik", "Halkla İlişkiler ve Tanıtım", "Radyo Televizyon ve Sinema","Görsel İletişim Tasarımı","Reklamcılık"];
+                    let muh = ["Bilgisayar Mühendisliği", "Elektronik ve Haberleşme Mühendisliği", "Mekatronik Mühendisliği","Elektrik Mühendisliği","Endüstri Mühendisliği"];
+                    let iktisat = ["Çalışma Ekonomisi ve Endüstri İlişkileri", "İktisat", "İşletme","Siyaset Bilimi ve Kamu Yönetimi","Uluslararası İlişkiler"];
+                    removeOptions(document.getElementById('select'));
+                    if (deg == "egitim") {
+                        for (var i = 0; i < egitim.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select").options.add(opt);
+                            opt.text = egitim[i];
+                            opt.value = egitim[i];
+                        }
+                    }
+                    if (deg == "fen") {
+                        for (var i = 0; i < fen.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select").options.add(opt);
+                            opt.text = fen[i];
+                            opt.value = fen[i];
+                        }
+                    }
+                    if (deg == "iletisim") {
+                        for (var i = 0; i < iletisim.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select").options.add(opt);
+                            opt.text = iletisim[i];
+                            opt.value = iletisim[i];
+                        }
+                    }
+                    if (deg == "muh") {
+                        for (var i = 0; i < muh.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select").options.add(opt);
+                            opt.text = muh[i];
+                            opt.value = muh[i];
+                        }
+                    }
+                    if (deg == "iktisat") {
+                        for (var i = 0; i < iktisat.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select").options.add(opt);
+                            opt.text = iktisat[i];
+                            opt.value = iktisat[i];
+                        }
+                    }
+
+                }
+
+                function removeOptions(selectElement) {
+                    var i, L = selectElement.options.length - 1;
+                    for (i = L; i >= 0; i--) {
+                        selectElement.remove(i);
+                    }
+                }
+            </script>
             <div class="row">
                 <p>Başkanlık:</p>
                 <input type="text" name="baskanlik" placeholder="Başkanlık">

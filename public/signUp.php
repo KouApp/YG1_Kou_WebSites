@@ -64,29 +64,39 @@
                 <p>Fakülte:</p>
                 <select name="select2" id="select2" onChange="uni(this);">
                     <option selected disabled>Seçim Yapınız</option>
-                    <option value="tekno">Teknoloji Fakültesi</option>
+                    <option value="egitim">Eğitim Fakültesi</option>
                     <option value="fen">Fen-Edebiyat Fakültesi</option>
-                    <option value="hukuk">Hukuk Fakültesi</option>
+                    <option value="iktisat">İktisadi ve İdari Bilimler Fakültesi</option>
                     <option value="muh">Mühendislik Fakültesi</option>
-                    <option value="sosyal">Sosyal Bilimler Fakültesi</option>
+                    <option value="iletisim">İletişim Fakültesi</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <p>Bölüm:</p>
+                <select name="select3" id="select3">
+                    <option selected disabled>Seçim Yapınız</option>
                 </select>
             </div>
             <script type="text/javascript">
+
                 function uni(sel) {
-                    addOpt(sel.options[sel.selectedIndex].text);
+                    addOpt(sel.options[sel.selectedIndex].value);
                 }
 
                 function addOpt(deg) {
-                    let tekno = ["Bilişim Sistemleri Müh", "Biyomedikal Müh", "Otomativ Müh" , ];
-                    let fen = ["burası", "fen", "fakultesi"];
-                    let hukuk = ["burası", "hukuk", "fakultesi"];
+                    let egitim = ["Fen bilgisi öğretmenliği", "İngilizce öğretmenliği", "Okul öncesi öğretmenliği","Rehberlik ve psikolojik danışmanlık","Sınıf öğretmenliği"];
+                    let fen = ["Matematik", "Fizik", "Kimya","Tarih","Arkeoloji"];
+                    let iletisim = ["Gazetecilik", "Halkla İlişkiler ve Tanıtım", "Radyo Televizyon ve Sinema","Görsel İletişim Tasarımı","Reklamcılık"];
+                    let muh = ["Bilgisayar Mühendisliği", "Elektronik ve Haberleşme Mühendisliği", "Mekatronik Mühendisliği","Elektrik Mühendisliği","Endüstri Mühendisliği"];
+                    let iktisat = ["Çalışma Ekonomisi ve Endüstri İlişkileri", "İktisat", "İşletme","Siyaset Bilimi ve Kamu Yönetimi","Uluslararası İlişkiler"];
                     removeOptions(document.getElementById('select3'));
-                    if (deg == "tekno") {
-                        for (var i = 0; i < tekno.length; i++) {
+                    if (deg == "egitim") {
+                        for (var i = 0; i < egitim.length; i++) {
                             var opt = document.createElement("option");
                             document.getElementById("select3").options.add(opt);
-                            opt.text = tekno[i];
-                            opt.value = tekno[i];
+                            opt.text = egitim[i];
+                            opt.value = egitim[i];
                         }
                     }
                     if (deg == "fen") {
@@ -95,6 +105,30 @@
                             document.getElementById("select3").options.add(opt);
                             opt.text = fen[i];
                             opt.value = fen[i];
+                        }
+                    }
+                    if (deg == "iletisim") {
+                        for (var i = 0; i < iletisim.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select3").options.add(opt);
+                            opt.text = iletisim[i];
+                            opt.value = iletisim[i];
+                        }
+                    }
+                    if (deg == "muh") {
+                        for (var i = 0; i < muh.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select3").options.add(opt);
+                            opt.text = muh[i];
+                            opt.value = muh[i];
+                        }
+                    }
+                    if (deg == "iktisat") {
+                        for (var i = 0; i < iktisat.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select3").options.add(opt);
+                            opt.text = iktisat[i];
+                            opt.value = iktisat[i];
                         }
                     }
 
@@ -107,12 +141,6 @@
                     }
                 }
             </script>
-            <div class="row">
-                <p>Bölüm:</p>
-                <select name="select3" id="select3">
-
-                </select>
-            </div>
             <div class="row">
                 <p>Sınıf:</p>
                 <select name="selectclass" id="select">

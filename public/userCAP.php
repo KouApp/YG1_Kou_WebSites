@@ -51,28 +51,86 @@ session_start();
 
             <div class="row">
                 <p>Fakülte:</p>
-                <select name="select" id="select">
+                <select name="select" id="select" onchange="uni(this);">
                     <option selected disabled>Seçim Yapınız</option>
                     <option value="egitim">Eğitim Fakültesi</option>
                     <option value="fen">Fen Edebiyat Fakültesi</option>
-                    <option value="iktisadi">İktisadi ve İdari Bilimler Fakültesi</option>
+                    <option value="iktisat">İktisadi ve İdari Bilimler Fakültesi</option>
                     <option value="iletisim">İletişim Fakültesi</option>
-                    <option value="müh">Mühendislik Fakültesi</option>
+                    <option value="muh">Mühendislik Fakültesi</option>
                 </select>
             </div>
 
             <div class="row">
                 <p>Bölüm:</p>
-                <select name="select2" id="select2">
+                <select name="select2" id="select2" onchange="uni2(this);">
                     <option selected disabled>Seçim Yapınız</option>
-                    <option value="1">Yasin</option>
-                    <option value="2">Buraya</option>
-                    <option value="3">Da</option>
-                    <option value="4">Yardım</option>
-                    <option value="5">Lazım</option>
+
                 </select>
             </div>
+            <script type="text/javascript">
 
+                function uni(sel) {
+                    addOpt(sel.options[sel.selectedIndex].value);
+                }
+
+                function addOpt(deg) {
+                    let egitim = ["Fen bilgisi öğretmenliği", "İngilizce öğretmenliği", "Okul öncesi öğretmenliği","Rehberlik ve psikolojik danışmanlık","Sınıf öğretmenliği"];
+                    let fen = ["Matematik", "Fizik", "Kimya","Tarih","Arkeoloji"];
+                    let iletisim = ["Gazetecilik", "Halkla İlişkiler ve Tanıtım", "Radyo Televizyon ve Sinema","Görsel İletişim Tasarımı","Reklamcılık"];
+                    let muh = ["Bilgisayar Mühendisliği", "Elektronik ve Haberleşme Mühendisliği", "Mekatronik Mühendisligi","Elektrik Mühendisliği","Endüstri Mühendisliği"];
+                    let iktisat = ["Çalışma Ekonomisi ve Endüstri İlişkileri", "İktisat", "İşletme","Siyaset Bilimi ve Kamu Yönetimi","Uluslararası İlişkiler"];
+                    removeOptions(document.getElementById('select2'));
+                    if (deg == "egitim") {
+                        for (var i = 0; i < egitim.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select2").options.add(opt);
+                            opt.text = egitim[i];
+                            opt.value = egitim[i];
+                        }
+                    }
+                    if (deg == "fen") {
+                        for (var i = 0; i < fen.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select2").options.add(opt);
+                            opt.text = fen[i];
+                            opt.value = fen[i];
+                        }
+                    }
+                    if (deg == "iletisim") {
+                        for (var i = 0; i < iletisim.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select2").options.add(opt);
+                            opt.text = iletisim[i];
+                            opt.value = iletisim[i];
+                        }
+                    }
+                    if (deg == "muh") {
+                        for (var i = 0; i < muh.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select2").options.add(opt);
+                            opt.text = muh[i];
+                            opt.value = muh[i];
+                        }
+                    }
+                    if (deg == "iktisat") {
+                        for (var i = 0; i < iktisat.length; i++) {
+                            var opt = document.createElement("option");
+                            document.getElementById("select2").options.add(opt);
+                            opt.text = iktisat[i];
+                            opt.value = iktisat[i];
+                        }
+                    }
+
+                }
+
+                function removeOptions(selectElement) {
+                    var i, L = selectElement.options.length - 1;
+                    for (i = L; i >= 0; i--) {
+                        selectElement.remove(i);
+                    }
+                }
+            </script>
             <div class="row">
                 <p>Program:</p>
                 <input type="text" name="prog" placeholder="Program">
@@ -106,14 +164,61 @@ session_start();
                 <p>İstenilen Bölüm:</p>
                 <select name="select3" id="select3">
                     <option selected disabled>Seçim Yapınız</option>
-                    <option value="1">Yasin</option>
-                    <option value="2">Buraya</option>
-                    <option value="3">Da</option>
-                    <option value="4">Yardım</option>
-                    <option value="5">Lazım</option>
+
                 </select>
             </div>
+            <script type="text/javascript">
 
+                function uni2(sel) {
+                    addOpt2(sel.options[sel.selectedIndex].value);
+                }
+
+                function addOpt2(deg) {
+                    let mekatronik = ["Elektronik ve Haberleşme Mühendisliği", "Elektrik Mühendisliği", "Makine Mühendisliği"];
+                    let endustri = ["Çevre Mühendisliği", "Elektronik ve Haberleşme Mühendisliği","Bilgisayar Mühendisliği", "İnşaat Mühendisliği", "Makine Mühendisliği"];
+                    let elektronik = ["Bilgisayar Mühendisliği", "Elektrik Mühendisliği", "Endüstri Mühendisliği","Mekatronik Mühendisliği"];
+                    let elktrik = ["Elektronik ve Haberleşme Mühendisliği", "Bilgisayar Mühendisliği", "Mekatronik Mühendisliği"];
+                    let bilgisayar = ["Elektronik ve Haberleşme Mühendisliği", "Elektrik Mühendisliği"];
+                    removeOptions2(document.getElementById('select3'));
+                    if (deg == "Mekatronik Mühendisligi") {
+                        for (var i = 0; i < mekatronik.length; i++) {ekle(mekatronik[i]);}}
+                    if (deg == "Endüstri Mühendisliği") {
+                        for (var i = 0; i < endustri.length; i++) {ekle(endustri[i]);}}
+                    if (deg == "Elektronik ve Haberleşme Mühendisliği") {
+                        for (var i = 0; i < elektronik.length; i++) {ekle(elektronik[i]);}}
+                    if (deg == "Elektrik Mühendisliği") {
+                        for (var i = 0; i < elktrik.length; i++) {ekle(elktrik[i]);}}
+                    if (deg == "Bilgisayar Mühendisliği") {
+                        for (var i = 0; i < bilgisayar.length; i++) {ekle(bilgisayar[i]);}}
+                    let fenbilg = ["Rehberlik ve Psikolojik Danışmanlık", "İşletme", "Fizik","Matematik","Kimya","Biyoloji"];
+                    let ingilizce = ["Rehberlik ve Psikolojik Danışmanlık", "İşletme","Tarih", "Türk Dili ve Edebiyatı", "İngiliz Dili ve Edebiyatı","Halkla İlişkiler ve Tanıtım"];
+                    let okuloncesi = ["Rehberlik ve Psikolojik Danışmanlık", "İşletme", "Tarih","Türk Dili ve Edebiyatı","Sosyoloji"];
+                    let sınıfogr = ["Rehberlik ve Psikolojik Danışmanlık", "Okul Öncesi Öğretmenliği", "İngilizce Öğretmenliği","İşletme","Sosyoloji","Tarih","Felsefe","Türk Dİli Ve Edebiyatı","Gazetecilik","Halkla İlişkiler ve Tanıtım"];
+                    let arkeoloji = ["Rehberlik ve Psikolojik Danışmanlık", "İktisat","Siyaset Bilimi ve Kamu Yönetimi","Uluslararası İlişkiler","Çalışma Ekonomisi Ve Endüstri İlişkileri","Sosyoloji","Felsefe","Türk Dili ve Edebiyatı","Tarih"];
+
+                    if (deg == "Fen bilgisi öğretmenliği") {
+                        for (var i = 0; i < fenbilg.length; i++) {ekle(fenbilg[i]);}}
+                    if (deg == "İngilizce öğretmenliği") {
+                        for (var i = 0; i < ingilizce.length; i++) {ekle(ingilizce[i]);}}
+                    if (deg == "Okul öncesi öğretmenliği") {
+                        for (var i = 0; i < okuloncesi.length; i++) {ekle(okuloncesi[i]);}}
+                    if (deg == "Sınıf öğretmenliği") {
+                        for (var i = 0; i < sınıfogr.length; i++) {ekle(sınıfogr[i]);}}
+                    if (deg == "Arkeoloji") {
+                        for (var i = 0; i < arkeoloji.length; i++) {ekle(arkeoloji[i]);}}
+                }
+                function ekle(degisken){
+                    var opt = document.createElement("option");
+                    document.getElementById("select3").options.add(opt);
+                    opt.text = degisken;
+                }
+                function removeOptions2(selectElement) {
+                    var i, L = selectElement.options.length - 1;
+                    for (i = L; i >= 0; i--) {
+                        selectElement.remove(i);
+                    }
+                }
+            </script>
 
             <div class="file-container">
                 <input href="" id="fileButton" type="submit" value="Belge indir">

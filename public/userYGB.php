@@ -64,67 +64,67 @@ session_start();
             </div>
             <div class="row">
                 <p>Ad Soyad:</p>
-                <input type="text" name="adsoyad" value="ad soyad" placeholder="Ad Soyad">
+                <input type="text" name="adsoyad" value="Yasin Sahin" placeholder="Yasin Sahin">
             </div>
             <div class="row">
                 <p>T.C. No:</p>
-                <input type="text" name="tcno" placeholder="T.C. No" value="55555">
+                <input type="text" name="tcno" placeholder="T.C. No" value="541541541">
             </div>
             <div class="row">
                 <p>Doğum Tarihi:</p>
-                <input type="text" name="dgmtrh" placeholder="Doğum Tarihi" value="15.15.15">
+                <input type="text" name="dgmtrh" placeholder="Doğum Tarihi" value="15.12.95">
             </div>
             <div class="row">
                 <p>Telefon:</p>
-                <input type="text" name="tel" placeholder="Telefon" value="055512232">
+                <input type="text" name="tel" placeholder="Telefon" value="05418523636">
             </div>
             <div class="row">
                 <p>E-Posta:</p>
-                <input type="text" name="mail" placeholder="E-Posta" value="example@hotma">
+                <input type="text" name="mail" placeholder="E-Posta" value="example@hotmail.com">
             </div>
             <div class="row">
                 <p>Adres:</p>
-                <input type="text" name="adres" placeholder="Adres" value="addres">
+                <input type="text" name="adres" placeholder="Adres" value="Adresim">
             </div>
             <div class="row">
                 <p>Kayıtlı Üniversite:</p>
-                <input type="text" name="kytuni" placeholder="Kayıtlı Üniversite" value="kayitüni">
+                <input type="text" name="kytuni" placeholder="Kayıtlı Üniversite" value="Kocaeli Üniversitesi">
             </div>
             <div class="row">
                 <p>Kayıtlı Fakülte:</p>
-                <input type="text" name="kytfac" placeholder="Kayıtlı Fakülte" value="kayit fak">
+                <input type="text" name="kytfac" placeholder="Kayıtlı Fakülte" value="Teknoloji Fakültesi">
             </div>
             <div class="row">
                 <p>Kayıtlı Bölüm:</p>
-                <input type="text" name="kytbolm" placeholder="Kayıtlı Bölüm" value="kayitli bölm">
+                <input type="text" name="kytbolm" placeholder="Kayıtlı Bölüm" value="Bilisim Sistemleri müh">
             </div>
             <div class="row">
                 <p>Öğrenci No:</p>
-                <input type="text" name="ogrno" placeholder="Öğrenci No" value="1881818">
+                <input type="text" name="ogrno" placeholder="Öğrenci No" value="181181811">
             </div>
             <div class="row">
                 <p>Yerleştiği Yıl:</p>
-                <input type="text" name="yrlsyıl" placeholder="Yerleştiği Yıl" value="2020">
+                <input type="text" name="yrlsyıl" placeholder="Yerleştiği Yıl" value="2022">
             </div>
             <div class="row">
                 <p>Başvurulan Fakülte:</p>
-                <input type="text" name="bsvrfac" placeholder="Başvurulan Fakülte" value="basvurulan fakulte">
+                <input type="text" name="bsvrfac" placeholder="Başvurulan Fakülte" value="fakülte">
             </div>
             <div class="row">
                 <p>Başvurulan Bölüm:</p>
-                <input type="text" name="basvrbol" placeholder="Başvurulan Bölüm" value="basvr bolm">
+                <input type="text" name="basvrbol" placeholder="Başvurulan Bölüm" value="basvur bolum">
             </div>
             <div class="row">
                 <p>Ev Telefonu:</p>
-                <input type="text" name="evtel" placeholder="Ev Telefonu" value="ev tel">
+                <input type="text" name="evtel" placeholder="Ev Telefonu" value="0555 111 22 22">
             </div>
             <div class="row">
                 <p>Tarih:</p>
-                <input type="text" name="tarih" placeholder="Tarih" value="tarih">
+                <input type="text" name="tarih" placeholder="Tarih" value="04.12.22">
             </div>
             <div class="row">
                 <p>Mevcut Sınıf:</p>
-                <input type="text" name="mvctsnf" placeholder="Mevcut Sınıf" value="mevut sınıf">
+                <input type="text" name="mvctsnf" placeholder="Mevcut Sınıf" value="3">
             </div>
             <div class="row">
                 <p>Mevcut Yarıyıl:</p>
@@ -132,19 +132,19 @@ session_start();
             </div>
             <div class="row">
                 <p>Not Ortalaması:</p>
-                <input type="text" name="notort" placeholder="Not Ortalaması" value="2.2">
+                <input type="text" name="notort" placeholder="Not Ortalaması" value="3.2">
             </div>
             <div class="row">
                 <p>Kayıt Olunan Puan:</p>
-                <input type="text" name="puan" placeholder="Kayıt Olunan Puan" value="220">
+                <input type="text" name="puan" placeholder="Kayıt Olunan Puan" value="300">
             </div>
             <div class="row">
                 <p>Başvurulan Puan:</p>
-                <input type="text" name="bsvrpuan" placeholder="Başvurulan Puan" value="280">
+                <input type="text" name="bsvrpuan" placeholder="Başvurulan Puan" value="300">
             </div>
             <div class="row">
                 <p>Başvurulan Öğrenim:</p>
-                <input type="text" name="bsvrornm" placeholder="Başvurulan Öğrenim" value="1ad">
+                <input type="text" name="bsvrornm" placeholder="Başvurulan Öğrenim" value="1.Ögretim">
             </div>
             <div class="row">
                 <p>Yabancı Dil Puanı:</p>
@@ -152,7 +152,7 @@ session_start();
             </div>
             <div class="row">
                 <p>Disiplin Cezası:</p>
-                <input type="text" name="dsplnceza" placeholder="Disiplin Cezası" value="yokad">
+                <input type="text" name="dsplnceza" placeholder="Disiplin Cezası" value="yok">
             </div>
             <div class="button1">
                 <input type="submit" class="apply-button" value="Başvuru İndir"></input>
