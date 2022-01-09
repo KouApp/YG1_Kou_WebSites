@@ -54,6 +54,7 @@ $dosyaadi = "Dosya ismi";
                     <option value="cap">Çap Basv</option>
                     <option value="intibak">İntibak Basv</option>
                     <option value="ygb">Yatay Geçiş Basv</option>
+                    <option value="yaz">Yatay Geçiş Basv</option>
                 </select>
                 <div class="button1">
                     <input type="submit" value="SECİN" id="secid" name="secla">

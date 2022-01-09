@@ -1,32 +1,16 @@
 <?php
 session_start();
 
-function files()
-{
-    if(isset($_FILES["dosya"])) {
-        $tmp_name = $_FILES["dosya"]["tmp_name"];
-        $path = 'dosyalar/'. $_FILES['dosya']['name'];
-        if (move_uploaded_file($tmp_name, $path)) {
-            echo 'Dosya yüklendi.';
-            $b64Doc = base64_encode(file_get_contents($path));
-            return $b64Doc;
-        } else {
-            echo 'Dosya yüklemede hata.';
-        }
-        unlink($tmp_name);
-    }
-}
 
-$res = files();
-if ($res == "error"):
-    echo "error";
-else:
-    $type = $_FILES['dosya']['type'];
-    $name = $_FILES['dosya']['name'];
-    echo $type;
 
-    yolla($res,$name,$type);
-endif;
+
+$tmp_name_trans = $_FILES["dosya"]["tmp_name"];
+$res_trans = base64_encode(file_get_contents($tmp_name_trans));
+
+$type = $_FILES['dosya']['type'];
+$name = $_FILES['dosya']['name'];
+
+yolla($res_trans,$name,$type);
 function yolla($res,$name,$type){
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -51,13 +35,15 @@ function yolla($res,$name,$type){
     echo $response;
 
 
-    unlink('dosyalar/'. $_FILES['dosya']['name']);
+    
     echo $response;
 
     if($response=="True"):
-        header("Location: /login.php");
+        echo'<meta http-equiv="refresh" content="0;URL=login.php">';
+
     else:
-        header("Location: /404.php");
+        echo'<meta http-equiv="refresh" content="0;URL=404.php">';
+
     endif;
 }
 ?>
