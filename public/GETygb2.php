@@ -26,7 +26,7 @@ function filesave($pur,$res,$trans){
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS => array('TCNo' => $_SESSION['user'],
-            'fileType' => 'application/pdf',
+            'fileType' => $pur,
             'Base64' => $res,
             'fileName' => $trans,
             'Purpose' => 'ygb'),
@@ -36,14 +36,14 @@ function filesave($pur,$res,$trans){
 
 
 }
-$trans = "trans";
-filesave($trans,$res_trans,$trans);
+$trans = "transkript";
+filesave($_FILES["trans"]["type"],$res_trans,$trans);
 $dsip = "disiplin";
-filesave($dsip,$res_disiplin,$dsip);
+filesave($_FILES["disiplin"]["type"],$res_disiplin,$dsip);
 $sinav = "sinav";
-filesave($sinav,$res_sinav,$sinav);
+filesave($_FILES["sinav"]["type"],$res_sinav,$sinav);
 $dekont = "dekont";
-filesave($dekont,$res_dekont,$dekont);
+filesave($_FILES["dekont"]["type"],$res_dekont,$dekont);
 $basvur = "basvur";
-filesave($basvur,$res_basvur,$basvur);
+filesave($_FILES["basvur"]["type"],$res_basvur,$basvur);
 echo'<meta http-equiv="refresh" content="0;URL=kayitBasarili.php">';

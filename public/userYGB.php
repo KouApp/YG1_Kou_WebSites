@@ -204,7 +204,7 @@ session_start();
                     <input type="file" id="idBasvur" name="basvur" class="file-button">
                 </div>
                 <div class="button1">
-                    <input type="submit" class="apply-button" value="Başvur"></input>
+                    <input type="submit" class="apply-button" value="Başvur">
                 </div>
             </div>
 

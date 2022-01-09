@@ -51,9 +51,9 @@ $dosyaadi = "Dosya ismi";
                 <a>Başvuru türü : </a>
                 <select name="select2" id="select2">
                     <option selected disabled>Seçim Yapınız</option>
-                    <option value="cap">cap</option>
-                    <option value="intibak">İntibak</option>
-
+                    <option value="cap">Çap Basv</option>
+                    <option value="intibak">İntibak Basv</option>
+                    <option value="ygb">Yatay Geçiş Basv</option>
                 </select>
                 <div class="button1">
                     <input type="submit" value="SECİN" id="secid" name="secla">
