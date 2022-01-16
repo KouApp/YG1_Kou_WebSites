@@ -143,7 +143,7 @@ session_start();
 
             <div class="row">
                 <p>Sınıf:</p>
-                <input type="text" name="classe" placeholder="Telefon">
+                <input type="text" name="classe" placeholder="Sınıf">
             </div>
             <div class="row">
                 <p>Telefon:</p>

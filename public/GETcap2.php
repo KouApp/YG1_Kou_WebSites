@@ -35,7 +35,7 @@ function yolla($res,$name,$type){
     echo $response;
 
 
-    
+
     echo $response;
 
     if($response=="True"):
